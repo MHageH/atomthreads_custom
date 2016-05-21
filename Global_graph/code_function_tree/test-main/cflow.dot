@@ -1,0 +1,94 @@
+digraph G {
+node [peripheries=2 style="filled,rounded" fontname="Vera Sans YuanTi Mono" color="#eecc80"];
+rankdir=LR;
+label="../kernel/atomkernel.c"
+main [shape=box];
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+main->board_setup
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+main->atomOSInit
+node [color="#80ccee" shape=octagon];edge [color="#80ccee"];
+atomOSInit->atomThreadCreate
+node [color="#eecc80" shape=hexagon];edge [color="#eecc80"];
+atomThreadCreate->archThreadContextInit
+node [color="#80eecc" shape=diamond];edge [color="#80eecc"];
+archThreadContextInit->assert_static
+node [color="#80eecc" shape=diamond];edge [color="#80eecc"];
+archThreadContextInit->offsetof
+node [color="#80eecc" shape=diamond];edge [color="#80eecc"];
+archThreadContextInit->STACK_ALIGN
+node [color="#80eecc" shape=diamond];edge [color="#80eecc"];
+archThreadContextInit->printf
+node [color="#80eecc" shape=diamond];edge [color="#80eecc"];
+archThreadContextInit->thread_shell
+node [color="#eecc80" shape=box];edge [color="#eecc80"];
+thread_shell->atomCurrentContext
+node [color="#eecc80" shape=hexagon];edge [color="#eecc80"];
+atomThreadCreate->CRITICAL_START
+node [color="#eecc80" shape=hexagon];edge [color="#eecc80"];
+atomThreadCreate->tcbEnqueuePriority
+node [color="#eecc80" shape=hexagon];edge [color="#eecc80"];
+atomThreadCreate->CRITICAL_END
+node [color="#eecc80" shape=hexagon];edge [color="#eecc80"];
+atomThreadCreate->atomCurrentContext
+node [color="#eecc80" shape=hexagon];edge [color="#eecc80"];
+atomThreadCreate->atomSched
+node [color="#80eecc" shape=diamond];edge [color="#80eecc"];
+atomSched->CRITICAL_START
+node [color="#80eecc" shape=diamond];edge [color="#80eecc"];
+atomSched->tcbDequeueHead
+node [color="#80eecc" shape=diamond];edge [color="#80eecc"];
+atomSched->atomThreadSwitch
+node [color="#eecc80" shape=box];edge [color="#eecc80"];
+atomThreadSwitch->archContextSwitch
+node [color="#80eecc" shape=diamond];edge [color="#80eecc"];
+atomSched->tcbDequeuePriority
+node [color="#80eecc" shape=diamond];edge [color="#80eecc"];
+atomSched->tcbEnqueuePriority
+node [color="#80eecc" shape=diamond];edge [color="#80eecc"];
+atomSched->CRITICAL_END
+node [color="#80ccee" shape=octagon];edge [color="#80ccee"];
+atomOSInit->atomIdleThread
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+main->atomThreadCreate
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+main->main_thread_func
+node [color="#80ccee" shape=octagon];edge [color="#80ccee"];
+main_thread_func->printf
+node [color="#80ccee" shape=octagon];edge [color="#80ccee"];
+main_thread_func->test_start
+node [color="#80ccee" shape=octagon];edge [color="#80ccee"];
+main_thread_func->atomThreadStackCheck
+node [color="#80ccee" shape=octagon];edge [color="#80ccee"];
+main_thread_func->test_led_toggle
+node [color="#80ccee" shape=octagon];edge [color="#80ccee"];
+main_thread_func->atomTimerDelay
+node [color="#eecc80" shape=hexagon];edge [color="#eecc80"];
+atomTimerDelay->atomCurrentContext
+node [color="#eecc80" shape=hexagon];edge [color="#eecc80"];
+atomTimerDelay->CRITICAL_START
+node [color="#eecc80" shape=hexagon];edge [color="#eecc80"];
+atomTimerDelay->atomTimerDelayCallback
+node [color="#80eecc" shape=diamond];edge [color="#80eecc"];
+atomTimerDelayCallback->CRITICAL_START
+node [color="#80eecc" shape=diamond];edge [color="#80eecc"];
+atomTimerDelayCallback->tcbEnqueuePriority
+node [color="#80eecc" shape=diamond];edge [color="#80eecc"];
+atomTimerDelayCallback->CRITICAL_END
+node [color="#eecc80" shape=hexagon];edge [color="#eecc80"];
+atomTimerDelay->atomTimerRegister
+node [color="#80eecc" shape=diamond];edge [color="#80eecc"];
+atomTimerRegister->CRITICAL_START
+node [color="#80eecc" shape=diamond];edge [color="#80eecc"];
+atomTimerRegister->CRITICAL_END
+node [color="#eecc80" shape=hexagon];edge [color="#eecc80"];
+atomTimerDelay->CRITICAL_END
+node [color="#eecc80" shape=hexagon];edge [color="#eecc80"];
+atomTimerDelay->atomSched
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+main->atomOSStart
+node [color="#80ccee" shape=octagon];edge [color="#80ccee"];
+atomOSStart->tcbDequeuePriority
+node [color="#80ccee" shape=octagon];edge [color="#80ccee"];
+atomOSStart->archFirstThreadRestore
+}

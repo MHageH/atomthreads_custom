@@ -1,0 +1,278 @@
+digraph G {
+node [peripheries=2 style="filled,rounded" fontname="Vera Sans YuanTi Mono" color="#eecc80"];
+rankdir=LR;
+label="atomkernel.c"
+atomCurrentContext [shape=box];
+atomIntEnter [shape=box];
+atomIntExit [shape=box];
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomIntExit->atomSched
+node [color="#80ccee" shape=octagon];edge [color="#80ccee"];
+atomSched->CRITICAL_START
+node [color="#80ccee" shape=octagon];edge [color="#80ccee"];
+atomSched->tcbDequeueHead
+node [color="#80ccee" shape=octagon];edge [color="#80ccee"];
+atomSched->atomThreadSwitch
+node [color="#eecc80" shape=hexagon];edge [color="#eecc80"];
+atomThreadSwitch->archContextSwitch
+node [color="#80ccee" shape=octagon];edge [color="#80ccee"];
+atomSched->tcbDequeuePriority
+node [color="#80ccee" shape=octagon];edge [color="#80ccee"];
+atomSched->tcbEnqueuePriority
+node [color="#80ccee" shape=octagon];edge [color="#80ccee"];
+atomSched->CRITICAL_END
+atomMutexCreate [shape=box];
+atomMutexDelete [shape=box];
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomMutexDelete->CRITICAL_START
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomMutexDelete->tcbDequeueHead
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomMutexDelete->tcbEnqueuePriority
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomMutexDelete->CRITICAL_END
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomMutexDelete->atomTimerCancel
+node [color="#80ccee" shape=octagon];edge [color="#80ccee"];
+atomTimerCancel->CRITICAL_START
+node [color="#80ccee" shape=octagon];edge [color="#80ccee"];
+atomTimerCancel->CRITICAL_END
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomMutexDelete->atomCurrentContext
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomMutexDelete->atomSched
+atomMutexGet [shape=box];
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomMutexGet->atomCurrentContext
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomMutexGet->CRITICAL_START
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomMutexGet->CRITICAL_END
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomMutexGet->tcbEnqueuePriority
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomMutexGet->atomMutexTimerCallback
+node [color="#80ccee" shape=octagon];edge [color="#80ccee"];
+atomMutexTimerCallback->CRITICAL_START
+node [color="#80ccee" shape=octagon];edge [color="#80ccee"];
+atomMutexTimerCallback->tcbDequeueEntry
+node [color="#80ccee" shape=octagon];edge [color="#80ccee"];
+atomMutexTimerCallback->tcbEnqueuePriority
+node [color="#80ccee" shape=octagon];edge [color="#80ccee"];
+atomMutexTimerCallback->CRITICAL_END
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomMutexGet->atomTimerRegister
+node [color="#80ccee" shape=octagon];edge [color="#80ccee"];
+atomTimerRegister->CRITICAL_START
+node [color="#80ccee" shape=octagon];edge [color="#80ccee"];
+atomTimerRegister->CRITICAL_END
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomMutexGet->tcbDequeueEntry
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomMutexGet->atomSched
+atomMutexPut [shape=box];
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomMutexPut->atomCurrentContext
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomMutexPut->CRITICAL_START
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomMutexPut->CRITICAL_END
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomMutexPut->tcbDequeueHead
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomMutexPut->tcbEnqueuePriority
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomMutexPut->atomTimerCancel
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomMutexPut->atomSched
+atomOSInit [shape=box];
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomOSInit->atomThreadCreate
+node [color="#80ccee" shape=octagon];edge [color="#80ccee"];
+atomThreadCreate->archThreadContextInit
+node [color="#80ccee" shape=octagon];edge [color="#80ccee"];
+atomThreadCreate->CRITICAL_START
+node [color="#80ccee" shape=octagon];edge [color="#80ccee"];
+atomThreadCreate->tcbEnqueuePriority
+node [color="#80ccee" shape=octagon];edge [color="#80ccee"];
+atomThreadCreate->CRITICAL_END
+node [color="#80ccee" shape=octagon];edge [color="#80ccee"];
+atomThreadCreate->atomCurrentContext
+node [color="#80ccee" shape=octagon];edge [color="#80ccee"];
+atomThreadCreate->atomSched
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomOSInit->atomIdleThread
+atomOSStart [shape=box];
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomOSStart->tcbDequeuePriority
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomOSStart->archFirstThreadRestore
+atomQueueCreate [shape=box];
+atomQueueDelete [shape=box];
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomQueueDelete->CRITICAL_START
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomQueueDelete->tcbDequeueHead
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomQueueDelete->tcbEnqueuePriority
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomQueueDelete->CRITICAL_END
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomQueueDelete->atomTimerCancel
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomQueueDelete->atomCurrentContext
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomQueueDelete->atomSched
+atomQueueGet [shape=box];
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomQueueGet->CRITICAL_START
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomQueueGet->atomCurrentContext
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomQueueGet->tcbEnqueuePriority
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomQueueGet->atomQueueTimerCallback
+node [color="#80ccee" shape=octagon];edge [color="#80ccee"];
+atomQueueTimerCallback->CRITICAL_START
+node [color="#80ccee" shape=octagon];edge [color="#80ccee"];
+atomQueueTimerCallback->tcbDequeueEntry
+node [color="#80ccee" shape=octagon];edge [color="#80ccee"];
+atomQueueTimerCallback->tcbEnqueuePriority
+node [color="#80ccee" shape=octagon];edge [color="#80ccee"];
+atomQueueTimerCallback->CRITICAL_END
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomQueueGet->atomTimerRegister
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomQueueGet->tcbDequeueEntry
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomQueueGet->CRITICAL_END
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomQueueGet->atomSched
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomQueueGet->queue_remove
+node [color="#80ccee" shape=octagon];edge [color="#80ccee"];
+queue_remove->memcpy
+node [color="#80ccee" shape=octagon];edge [color="#80ccee"];
+queue_remove->tcbDequeueHead
+node [color="#80ccee" shape=octagon];edge [color="#80ccee"];
+queue_remove->tcbEnqueuePriority
+node [color="#80ccee" shape=octagon];edge [color="#80ccee"];
+queue_remove->atomTimerCancel
+atomQueuePut [shape=box];
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomQueuePut->CRITICAL_START
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomQueuePut->atomCurrentContext
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomQueuePut->tcbEnqueuePriority
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomQueuePut->atomQueueTimerCallback
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomQueuePut->atomTimerRegister
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomQueuePut->tcbDequeueEntry
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomQueuePut->CRITICAL_END
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomQueuePut->atomSched
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomQueuePut->queue_insert
+node [color="#80ccee" shape=octagon];edge [color="#80ccee"];
+queue_insert->memcpy
+node [color="#80ccee" shape=octagon];edge [color="#80ccee"];
+queue_insert->tcbDequeueHead
+node [color="#80ccee" shape=octagon];edge [color="#80ccee"];
+queue_insert->tcbEnqueuePriority
+node [color="#80ccee" shape=octagon];edge [color="#80ccee"];
+queue_insert->atomTimerCancel
+atomSched [shape=box];
+atomSemCreate [shape=box];
+atomSemDelete [shape=box];
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomSemDelete->CRITICAL_START
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomSemDelete->tcbDequeueHead
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomSemDelete->tcbEnqueuePriority
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomSemDelete->CRITICAL_END
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomSemDelete->atomTimerCancel
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomSemDelete->atomCurrentContext
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomSemDelete->atomSched
+atomSemGet [shape=box];
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomSemGet->CRITICAL_START
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomSemGet->atomCurrentContext
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomSemGet->tcbEnqueuePriority
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomSemGet->CRITICAL_END
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomSemGet->atomSemTimerCallback
+node [color="#80ccee" shape=octagon];edge [color="#80ccee"];
+atomSemTimerCallback->CRITICAL_START
+node [color="#80ccee" shape=octagon];edge [color="#80ccee"];
+atomSemTimerCallback->tcbDequeueEntry
+node [color="#80ccee" shape=octagon];edge [color="#80ccee"];
+atomSemTimerCallback->tcbEnqueuePriority
+node [color="#80ccee" shape=octagon];edge [color="#80ccee"];
+atomSemTimerCallback->CRITICAL_END
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomSemGet->atomTimerRegister
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomSemGet->tcbDequeueEntry
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomSemGet->atomSched
+atomSemPut [shape=box];
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomSemPut->CRITICAL_START
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomSemPut->tcbDequeueHead
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomSemPut->tcbEnqueuePriority
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomSemPut->CRITICAL_END
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomSemPut->atomTimerCancel
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomSemPut->atomCurrentContext
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomSemPut->atomSched
+atomSemResetCount [shape=box];
+atomThreadCreate [shape=box];
+atomThreadStackCheck [shape=box];
+atomTimeGet [shape=box];
+atomTimeSet [shape=box];
+atomTimerCancel [shape=box];
+atomTimerDelay [shape=box];
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomTimerDelay->atomCurrentContext
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomTimerDelay->CRITICAL_START
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomTimerDelay->atomTimerDelayCallback
+node [color="#80ccee" shape=octagon];edge [color="#80ccee"];
+atomTimerDelayCallback->CRITICAL_START
+node [color="#80ccee" shape=octagon];edge [color="#80ccee"];
+atomTimerDelayCallback->tcbEnqueuePriority
+node [color="#80ccee" shape=octagon];edge [color="#80ccee"];
+atomTimerDelayCallback->CRITICAL_END
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomTimerDelay->atomTimerRegister
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomTimerDelay->CRITICAL_END
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomTimerDelay->atomSched
+atomTimerRegister [shape=box];
+atomTimerTick [shape=box];
+node [color="#ccee80" shape=ellipse];edge [color="#ccee80"];
+atomTimerTick->atomTimerCallbacks
+tcbDequeueEntry [shape=box];
+tcbDequeueHead [shape=box];
+tcbDequeuePriority [shape=box];
+tcbEnqueuePriority [shape=box];
+}

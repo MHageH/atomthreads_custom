@@ -1,0 +1,557 @@
+
+;; Function thread_shell (thread_shell, funcdef_no=14, decl_uid=5292, cgraph_uid=14) (executed once)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+deleting block 9
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(call_insn 5 2 6 2 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("atomCurrentContext") [flags 0x41]  <function_decl 0x559ac180 atomCurrentContext>) [0 atomCurrentContext S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:140 -1
+     (nil)
+    (nil))
+(insn 6 5 7 2 (set (reg/v/f:SI 110 [ task_ptr ])
+        (reg:SI 0 r0)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:140 -1
+     (nil))
+(debug_insn 7 6 8 2 (var_location:SI task_ptr (reg/v/f:SI 110 [ task_ptr ])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:140 -1
+     (nil))
+(insn 8 7 9 2 (set (reg:CC 100 cc)
+        (compare:CC (reg/v/f:SI 110 [ task_ptr ])
+            (const_int 0 [0]))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:146 -1
+     (nil))
+(jump_insn 9 8 16 2 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 13)
+            (pc))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:146 -1
+     (expr_list:REG_BR_PROB (const_int 8500 [0x2134])
+        (nil))
+ -> 13)
+(code_label 16 9 10 4 4 "" [2 uses])
+(note 10 16 11 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 11 10 12 4 (set (pc)
+        (label_ref 24)) -1
+     (nil)
+ -> 24)
+(barrier 12 11 13)
+(code_label 13 12 14 5 2 "" [1 uses])
+(note 14 13 15 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 15 14 17 5 (set (reg/f:SI 111 [ D.5367 ])
+        (mem/f:SI (plus:SI (reg/v/f:SI 110 [ task_ptr ])
+                (const_int 8 [0x8])) [3 task_ptr_3->entry_point+0 S4 A32])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:146 -1
+     (nil))
+(insn 17 15 18 5 (set (reg:CC 100 cc)
+        (compare:CC (reg/f:SI 111 [ D.5367 ])
+            (const_int 0 [0]))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:146 -1
+     (nil))
+(jump_insn 18 17 19 5 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 16)
+            (pc))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:146 -1
+     (expr_list:REG_BR_PROB (const_int 3017 [0xbc9])
+        (nil))
+ -> 16)
+(note 19 18 20 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 20 19 21 6 (set (reg:SI 0 r0)
+        (mem:SI (plus:SI (reg/v/f:SI 110 [ task_ptr ])
+                (const_int 12 [0xc])) [5 task_ptr_3->entry_param+0 S4 A32])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:147 -1
+     (nil))
+(call_insn 21 20 22 6 (parallel [
+            (call (mem:SI (reg/f:SI 111 [ D.5367 ]) [0 *_4 S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:147 -1
+     (nil)
+    (expr_list:REG_CFA_WINDOW_SAVE (use (reg:SI 0 r0))
+        (nil)))
+(jump_insn 22 21 23 6 (set (pc)
+        (label_ref 16)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:147 -1
+     (nil)
+ -> 16)
+(barrier 23 22 24)
+(code_label 24 23 25 7 3 "" [2 uses])
+(note 25 24 26 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(note 26 25 27 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 27 26 28 8 (set (pc)
+        (label_ref 24)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:147 -1
+     (nil)
+ -> 24)
+(barrier 28 27 0)
+
+;; Function archFirstThreadRestore (archFirstThreadRestore, funcdef_no=9, decl_uid=5231, cgraph_uid=9)
+
+
+;; Generating RTL for gimple basic block 2
+deleting block 4
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (reg/v/f:SI 110 [ new_tcb_ptr ])
+        (reg:SI 0 r0 [ new_tcb_ptr ])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:56 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 3 7 2 (set (reg:SI 0 r0)
+        (reg/v/f:SI 110 [ new_tcb_ptr ])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:62 -1
+     (nil))
+(call_insn/j 7 6 8 2 (parallel [
+            (call (mem:SI (symbol_ref:SI ("_archFirstThreadRestore") [flags 0x41]  <function_decl 0x559ac880 _archFirstThreadRestore>) [0 _archFirstThreadRestore S4 A32])
+                (const_int 0 [0]))
+            (return)
+            (use (const_int 0 [0]))
+        ]) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:62 -1
+     (nil)
+    (expr_list:REG_CFA_WINDOW_SAVE (use (reg:SI 0 r0))
+        (nil)))
+(barrier 8 7 0)
+
+;; Function archContextSwitch (archContextSwitch, funcdef_no=10, decl_uid=5223, cgraph_uid=10)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Edge 2->5 redirected to 6
+Merging block 5 into block 4...
+Merged blocks 4 and 5.
+Merged 4 and 5 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 5 NOTE_INSN_DELETED)
+(note 5 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 5 3 2 (set (reg/v/f:SI 111 [ old_tcb_ptr ])
+        (reg:SI 0 r0 [ old_tcb_ptr ])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:83 -1
+     (nil))
+(insn 3 2 4 2 (set (reg/v/f:SI 112 [ new_tcb_ptr ])
+        (reg:SI 1 r1 [ new_tcb_ptr ])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:83 -1
+     (nil))
+(note 4 3 7 2 NOTE_INSN_FUNCTION_BEG)
+(insn 7 4 8 2 (set (reg/f:SI 113)
+        (symbol_ref:SI ("*.LANCHOR0") [flags 0x182])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:84 -1
+     (nil))
+(insn 8 7 9 2 (set (reg:SI 114 [ D.5373 ])
+        (unspec:SI [
+                (mem/c:SI (reg/f:SI 113) [2 ctx_switch_info+0 S4 A8])
+            ] UNSPEC_UNALIGNED_LOAD)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:84 -1
+     (nil))
+(insn 9 8 10 2 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 114 [ D.5373 ])
+            (const_int 0 [0]))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:84 -1
+     (nil))
+(jump_insn 10 9 11 2 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref:SI 20)
+            (pc))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:84 226 {arm_cond_branch}
+     (expr_list:REG_BR_PROB (const_int 4 [0x4])
+        (nil))
+ -> 20)
+(note 11 10 12 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 12 11 13 4 (set (reg/f:SI 115)
+        (symbol_ref:SI ("*.LANCHOR0") [flags 0x182])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:85 -1
+     (nil))
+(insn 13 12 14 4 (set (mem/f/c:SI (plus:SI (reg/f:SI 115)
+                (const_int 4 [0x4])) [3 ctx_switch_info.next_tcb+0 S4 A8])
+        (unspec:SI [
+                (reg/v/f:SI 112 [ new_tcb_ptr ])
+            ] UNSPEC_UNALIGNED_STORE)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:85 -1
+     (nil))
+(call_insn 14 13 15 4 (parallel [
+            (call (mem:SI (symbol_ref:SI ("__dmb") [flags 0x41]  <function_decl 0x55984680 __dmb>) [0 __dmb S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:89 -1
+     (nil)
+    (nil))
+(insn 15 14 16 4 (set (reg/f:SI 116)
+        (const_int -536810236 [0xffffffffe000ed04])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:91 -1
+     (nil))
+(insn 16 15 17 4 (set (reg:SI 117)
+        (const_int 268435456 [0x10000000])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:91 -1
+     (nil))
+(insn 17 16 20 4 (set (mem/v:SI (reg/f:SI 116) [5 MEM[(volatile uint32_t *)3758157060B]+0 S4 A32])
+        (reg:SI 117)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:91 -1
+     (nil))
+(code_label 20 17 21 6 11 "" [1 uses])
+(note 21 20 0 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+
+;; Function sys_tick_handler (sys_tick_handler, funcdef_no=11, decl_uid=4653, cgraph_uid=11)
+
+
+;; Generating RTL for gimple basic block 2
+deleting block 4
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(call_insn 5 2 6 2 (parallel [
+            (call (mem:SI (symbol_ref:SI ("atomIntEnter") [flags 0x41]  <function_decl 0x559a5e00 atomIntEnter>) [0 atomIntEnter S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:102 -1
+     (nil)
+    (nil))
+(call_insn 6 5 7 2 (parallel [
+            (call (mem:SI (symbol_ref:SI ("atomTimerTick") [flags 0x41]  <function_decl 0x559ac480 atomTimerTick>) [0 atomTimerTick S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:105 -1
+     (nil)
+    (nil))
+(insn 7 6 8 2 (set (reg:SI 0 r0)
+        (const_int 1 [0x1])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:108 -1
+     (nil))
+(call_insn/j 8 7 9 2 (parallel [
+            (call (mem:SI (symbol_ref:SI ("atomIntExit") [flags 0x41]  <function_decl 0x559a5f00 atomIntExit>) [0 atomIntExit S4 A32])
+                (const_int 0 [0]))
+            (return)
+            (use (const_int 0 [0]))
+        ]) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:108 -1
+     (nil)
+    (expr_list:REG_CFA_RESTORE (use (reg:SI 0 r0))
+        (nil)))
+(barrier 9 8 0)
+
+;; Function nmi_handler (nmi_handler, funcdef_no=12, decl_uid=4645, cgraph_uid=12)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+deleting block 6
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 7 2 NOTE_INSN_FUNCTION_BEG)
+(code_label 7 2 5 4 20 "" [1 uses])
+(note 5 7 6 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(note 6 5 8 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 8 6 9 5 (set (pc)
+        (label_ref 7)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:116 -1
+     (nil)
+ -> 7)
+(barrier 9 8 0)
+
+;; Function hard_fault_handler (hard_fault_handler, funcdef_no=13, decl_uid=4647, cgraph_uid=13)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+deleting block 6
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 7 2 NOTE_INSN_FUNCTION_BEG)
+(code_label 7 2 5 4 22 "" [1 uses])
+(note 5 7 6 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(note 6 5 8 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 8 6 9 5 (set (pc)
+        (label_ref 7)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:122 -1
+     (nil)
+ -> 7)
+(barrier 9 8 0)
+
+;; Function archThreadContextInit (archThreadContextInit, funcdef_no=15, decl_uid=5229, cgraph_uid=15)
+
+
+;; Generating RTL for gimple basic block 2
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 7 NOTE_INSN_DELETED)
+(note 7 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 7 3 2 (set (reg/v/f:SI 115 [ tcb_ptr ])
+        (reg:SI 0 r0 [ tcb_ptr ])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:164 -1
+     (nil))
+(insn 3 2 4 2 (set (reg/v/f:SI 116 [ stack_top ])
+        (reg:SI 1 r1 [ stack_top ])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:164 -1
+     (nil))
+(insn 4 3 5 2 (set (reg/v/f:SI 117 [ entry_point ])
+        (reg:SI 2 r2 [ entry_point ])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:164 -1
+     (nil))
+(insn 5 4 6 2 (set (reg/v:SI 118 [ entry_param ])
+        (reg:SI 3 r3 [ entry_param ])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:164 -1
+     (nil))
+(note 6 5 9 2 NOTE_INSN_FUNCTION_BEG)
+(insn 9 6 10 2 (set (reg:SI 111 [ D.5382 ])
+        (and:SI (reg/v/f:SI 116 [ stack_top ])
+            (const_int -4 [0xfffffffffffffffc]))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:182 -1
+     (nil))
+(insn 10 9 11 2 (set (reg/v/f:SI 112 [ stack_top ])
+        (reg:SI 111 [ D.5382 ])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:182 -1
+     (nil))
+(debug_insn 11 10 12 2 (var_location:SI stack_top (reg/v/f:SI 112 [ stack_top ])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:182 -1
+     (nil))
+(debug_insn 12 11 13 2 (var_location:SI isr_ctx (plus:SI (reg/v/f:SI 112 [ stack_top ])
+        (const_int -32 [0xffffffffffffffe0]))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:188 -1
+     (nil))
+(debug_insn 13 12 14 2 (var_location:SI tsk_ctx (plus:SI (reg/v/f:SI 112 [ stack_top ])
+        (const_int -68 [0xffffffffffffffbc]))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:189 -1
+     (nil))
+(insn 14 13 15 2 (set (reg:SI 119)
+        (const_int 16777216 [0x1000000])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:202 -1
+     (nil))
+(insn 15 14 16 2 (set (mem:SI (plus:SI (reg/v/f:SI 112 [ stack_top ])
+                (const_int -4 [0xfffffffffffffffc])) [5 MEM[(struct isr_stack *)stack_top_4 + 4294967264B].psr+0 S4 A32])
+        (reg:SI 119)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:202 -1
+     (nil))
+(insn 16 15 17 2 (set (reg/f:SI 120)
+        (symbol_ref:SI ("thread_shell") [flags 0x3]  <function_decl 0x559ac600 thread_shell>)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:203 -1
+     (nil))
+(insn 17 16 18 2 (set (mem:SI (plus:SI (reg/v/f:SI 112 [ stack_top ])
+                (const_int -8 [0xfffffffffffffff8])) [5 MEM[(struct isr_stack *)stack_top_4 + 4294967264B].pc+0 S4 A32])
+        (reg/f:SI 120)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:203 -1
+     (nil))
+(insn 18 17 19 2 (set (reg:SI 121)
+        (const_int -286331154 [0xffffffffeeeeeeee])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:206 -1
+     (nil))
+(insn 19 18 20 2 (set (mem:SI (plus:SI (reg/v/f:SI 112 [ stack_top ])
+                (const_int -12 [0xfffffffffffffff4])) [5 MEM[(struct isr_stack *)stack_top_4 + 4294967264B].lr+0 S4 A32])
+        (reg:SI 121)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:206 -1
+     (nil))
+(insn 20 19 21 2 (set (reg:SI 122)
+        (const_int -858993460 [0xffffffffcccccccc])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:207 -1
+     (nil))
+(insn 21 20 22 2 (set (mem:SI (plus:SI (reg/v/f:SI 112 [ stack_top ])
+                (const_int -16 [0xfffffffffffffff0])) [5 MEM[(struct isr_stack *)stack_top_4 + 4294967264B].r12+0 S4 A32])
+        (reg:SI 122)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:207 -1
+     (nil))
+(insn 22 21 23 2 (set (reg:SI 123)
+        (const_int 858993459 [0x33333333])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:208 -1
+     (nil))
+(insn 23 22 24 2 (set (mem:SI (plus:SI (reg/v/f:SI 112 [ stack_top ])
+                (const_int -20 [0xffffffffffffffec])) [5 MEM[(struct isr_stack *)stack_top_4 + 4294967264B].r3+0 S4 A32])
+        (reg:SI 123)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:208 -1
+     (nil))
+(insn 24 23 25 2 (set (reg:SI 124)
+        (const_int 572662306 [0x22222222])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:209 -1
+     (nil))
+(insn 25 24 26 2 (set (mem:SI (plus:SI (reg/v/f:SI 112 [ stack_top ])
+                (const_int -24 [0xffffffffffffffe8])) [5 MEM[(struct isr_stack *)stack_top_4 + 4294967264B].r2+0 S4 A32])
+        (reg:SI 124)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:209 -1
+     (nil))
+(insn 26 25 27 2 (set (reg:SI 125)
+        (const_int 286331153 [0x11111111])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:210 -1
+     (nil))
+(insn 27 26 28 2 (set (mem:SI (plus:SI (reg/v/f:SI 112 [ stack_top ])
+                (const_int -28 [0xffffffffffffffe4])) [5 MEM[(struct isr_stack *)stack_top_4 + 4294967264B].r1+0 S4 A32])
+        (reg:SI 125)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:210 -1
+     (nil))
+(insn 28 27 29 2 (set (reg:SI 126)
+        (const_int 0 [0])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:211 -1
+     (nil))
+(insn 29 28 30 2 (set (mem:SI (plus:SI (reg/v/f:SI 112 [ stack_top ])
+                (const_int -32 [0xffffffffffffffe0])) [5 MEM[(struct isr_stack *)stack_top_4 + 4294967264B].r0+0 S4 A32])
+        (reg:SI 126)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:211 -1
+     (nil))
+(insn 30 29 31 2 (set (reg:SI 127)
+        (const_int -3 [0xfffffffffffffffd])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:217 -1
+     (nil))
+(insn 31 30 32 2 (set (mem:SI (plus:SI (reg/v/f:SI 112 [ stack_top ])
+                (const_int -36 [0xffffffffffffffdc])) [5 MEM[(struct task_stack *)stack_top_4 + 4294967228B].exc_ret+0 S4 A32])
+        (reg:SI 127)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:217 -1
+     (nil))
+(insn 32 31 33 2 (set (reg:SI 128)
+        (const_int -1145324613 [0xffffffffbbbbbbbb])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:220 -1
+     (nil))
+(insn 33 32 34 2 (set (mem:SI (plus:SI (reg/v/f:SI 112 [ stack_top ])
+                (const_int -40 [0xffffffffffffffd8])) [5 MEM[(struct task_stack *)stack_top_4 + 4294967228B].r11+0 S4 A32])
+        (reg:SI 128)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:220 -1
+     (nil))
+(insn 34 33 35 2 (set (reg:SI 129)
+        (const_int -1431655766 [0xffffffffaaaaaaaa])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:221 -1
+     (nil))
+(insn 35 34 36 2 (set (mem:SI (plus:SI (reg/v/f:SI 112 [ stack_top ])
+                (const_int -44 [0xffffffffffffffd4])) [5 MEM[(struct task_stack *)stack_top_4 + 4294967228B].r10+0 S4 A32])
+        (reg:SI 129)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:221 -1
+     (nil))
+(insn 36 35 37 2 (set (reg:SI 130)
+        (const_int -1717986919 [0xffffffff99999999])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:222 -1
+     (nil))
+(insn 37 36 38 2 (set (mem:SI (plus:SI (reg/v/f:SI 112 [ stack_top ])
+                (const_int -48 [0xffffffffffffffd0])) [5 MEM[(struct task_stack *)stack_top_4 + 4294967228B].r9+0 S4 A32])
+        (reg:SI 130)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:222 -1
+     (nil))
+(insn 38 37 39 2 (set (reg:SI 131)
+        (const_int -2004318072 [0xffffffff88888888])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:223 -1
+     (nil))
+(insn 39 38 40 2 (set (mem:SI (plus:SI (reg/v/f:SI 112 [ stack_top ])
+                (const_int -52 [0xffffffffffffffcc])) [5 MEM[(struct task_stack *)stack_top_4 + 4294967228B].r8+0 S4 A32])
+        (reg:SI 131)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:223 -1
+     (nil))
+(insn 40 39 41 2 (set (reg:SI 132)
+        (const_int 2004318071 [0x77777777])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:224 -1
+     (nil))
+(insn 41 40 42 2 (set (mem:SI (plus:SI (reg/v/f:SI 112 [ stack_top ])
+                (const_int -56 [0xffffffffffffffc8])) [5 MEM[(struct task_stack *)stack_top_4 + 4294967228B].r7+0 S4 A32])
+        (reg:SI 132)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:224 -1
+     (nil))
+(insn 42 41 43 2 (set (reg:SI 133)
+        (const_int 1717986918 [0x66666666])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:225 -1
+     (nil))
+(insn 43 42 44 2 (set (mem:SI (plus:SI (reg/v/f:SI 112 [ stack_top ])
+                (const_int -60 [0xffffffffffffffc4])) [5 MEM[(struct task_stack *)stack_top_4 + 4294967228B].r6+0 S4 A32])
+        (reg:SI 133)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:225 -1
+     (nil))
+(insn 44 43 45 2 (set (reg:SI 134)
+        (const_int 1431655765 [0x55555555])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:226 -1
+     (nil))
+(insn 45 44 46 2 (set (mem:SI (plus:SI (reg/v/f:SI 112 [ stack_top ])
+                (const_int -64 [0xffffffffffffffc0])) [5 MEM[(struct task_stack *)stack_top_4 + 4294967228B].r5+0 S4 A32])
+        (reg:SI 134)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:226 -1
+     (nil))
+(insn 46 45 47 2 (set (reg:SI 135)
+        (const_int 1145324612 [0x44444444])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:227 -1
+     (nil))
+(insn 47 46 48 2 (set (mem:SI (plus:SI (reg/v/f:SI 112 [ stack_top ])
+                (const_int -68 [0xffffffffffffffbc])) [5 MEM[(struct task_stack *)stack_top_4 + 4294967228B].r4+0 S4 A32])
+        (reg:SI 135)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:227 -1
+     (nil))
+(insn 48 47 49 2 (set (reg:SI 136 [ tsk_ctx ])
+        (plus:SI (reg/v/f:SI 112 [ stack_top ])
+            (const_int -68 [0xffffffffffffffbc]))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:189 -1
+     (nil))
+(insn 49 48 50 2 (set (mem/f:SI (reg/v/f:SI 115 [ tcb_ptr ]) [3 tcb_ptr_25(D)->sp_save_ptr+0 S4 A32])
+        (reg:SI 136 [ tsk_ctx ])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:234 -1
+     (nil))
+(insn 50 49 51 2 (set (mem/f:SI (plus:SI (reg/v/f:SI 115 [ tcb_ptr ])
+                (const_int 8 [0x8])) [3 tcb_ptr_25(D)->entry_point+0 S4 A32])
+        (reg/v/f:SI 117 [ entry_point ])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:235 -1
+     (nil))
+(insn 51 50 0 2 (set (mem:SI (plus:SI (reg/v/f:SI 115 [ tcb_ptr ])
+                (const_int 12 [0xc])) [5 tcb_ptr_25(D)->entry_param+0 S4 A32])
+        (reg/v:SI 118 [ entry_param ])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/atomport.c:236 -1
+     (nil))

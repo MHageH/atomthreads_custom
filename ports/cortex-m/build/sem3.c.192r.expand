@@ -1,0 +1,1227 @@
+
+;; Function test_thread_func (test_thread_func, funcdef_no=10, decl_uid=5712, cgraph_uid=10, symbol_order=15) (executed once)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+deleting block 8
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (reg/v:SI 115 [ param ])
+        (reg:SI 0 r0 [ param ])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:250 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 3 7 2 (set (reg/v:SI 110 [ thread_id ])
+        (zero_extend:SI (subreg:QI (reg/v:SI 115 [ param ]) 0))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:254 -1
+     (nil))
+(debug_insn 7 6 8 2 (var_location:QI thread_id (subreg:QI (reg/v:SI 110 [ thread_id ]) 0)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:254 -1
+     (nil))
+(insn 8 7 9 2 (set (reg/f:SI 116)
+        (symbol_ref:SI ("*.LANCHOR0") [flags 0x182])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:261 -1
+     (nil))
+(insn 9 8 10 2 (set (reg:SI 1 r1)
+        (const_int 0 [0])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:261 -1
+     (nil))
+(insn 10 9 11 2 (set (reg:SI 0 r0)
+        (reg/f:SI 116)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:261 -1
+     (nil))
+(call_insn 11 10 12 2 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("atomSemGet") [flags 0x41]  <function_decl 0x2b0f36d4b500 atomSemGet>) [0 atomSemGet S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:261 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:SI ("atomSemGet") [flags 0x41]  <function_decl 0x2b0f36d4b500 atomSemGet>)
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (nil)))))
+(insn 12 11 13 2 (set (reg:SI 117)
+        (reg:SI 0 r0)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:261 -1
+     (nil))
+(insn 13 12 14 2 (set (reg:SI 111 [ D.5784 ])
+        (reg:SI 117)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:261 -1
+     (nil))
+(insn 14 13 15 2 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 111 [ D.5784 ])
+            (const_int 0 [0]))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:261 -1
+     (nil))
+(jump_insn 15 14 16 2 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 23)
+            (pc))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:261 -1
+     (int_list:REG_BR_PROB 7100 (nil))
+ -> 23)
+(note 16 15 17 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 17 16 18 4 (set (reg:SI 118)
+        (symbol_ref/v/f:SI ("*.LC0") [flags 0x82]  <var_decl 0x2b0f36d665a0 *.LC0>)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:263 -1
+     (nil))
+(insn 18 17 19 4 (set (reg:SI 0 r0)
+        (reg:SI 118)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:263 -1
+     (nil))
+(call_insn 19 18 38 4 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("puts") [flags 0x41]  <function_decl 0x2b0f36a18500 __builtin_puts>) [0 __builtin_puts S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:263 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:SI ("puts") [flags 0x41]  <function_decl 0x2b0f36a18500 __builtin_puts>)
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(code_label 38 19 20 5 4 "" [1 uses])
+(note 20 38 21 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 21 20 22 5 (set (pc)
+        (label_ref 41)) -1
+     (nil)
+ -> 41)
+(barrier 22 21 23)
+(code_label 23 22 24 6 2 "" [1 uses])
+(note 24 23 25 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 25 24 26 6 (set (reg/f:SI 119)
+        (symbol_ref:SI ("*.LANCHOR1") [flags 0x182])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:273 -1
+     (nil))
+(insn 26 25 27 6 (set (reg:SI 121)
+        (zero_extend:SI (mem/v/c:QI (reg/f:SI 119) [0 wake_cnt+0 S1 A8]))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:273 -1
+     (nil))
+(insn 27 26 28 6 (set (reg:QI 120)
+        (subreg:QI (reg:SI 121) 0)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:273 -1
+     (nil))
+(insn 28 27 29 6 (set (reg:SI 112 [ D.5784 ])
+        (zero_extend:SI (reg:QI 120))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:273 -1
+     (nil))
+(insn 29 28 30 6 (set (reg:SI 122)
+        (plus:SI (reg:SI 112 [ D.5784 ])
+            (const_int 1 [0x1]))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:273 -1
+     (nil))
+(insn 30 29 31 6 (set (reg:SI 113 [ D.5784 ])
+        (zero_extend:SI (subreg:QI (reg:SI 122) 0))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:273 -1
+     (nil))
+(insn 31 30 32 6 (set (reg/f:SI 123)
+        (symbol_ref:SI ("*.LANCHOR1") [flags 0x182])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:273 -1
+     (nil))
+(insn 32 31 33 6 (set (reg:QI 124)
+        (subreg/s/v:QI (reg:SI 113 [ D.5784 ]) 0)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:273 -1
+     (nil))
+(insn 33 32 34 6 (set (mem/v/c:QI (reg/f:SI 123) [0 wake_cnt+0 S1 A8])
+        (reg:QI 124)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:273 -1
+     (nil))
+(insn 34 33 35 6 (set (reg:SI 114 [ D.5785 ])
+        (reg:SI 112 [ D.5784 ])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:273 -1
+     (nil))
+(insn 35 34 36 6 (set (reg/f:SI 125)
+        (symbol_ref:SI ("*.LANCHOR2") [flags 0x182])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:273 -1
+     (nil))
+(insn 36 35 37 6 (set (reg:QI 126)
+        (subreg/s/v:QI (reg/v:SI 110 [ thread_id ]) 0)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:273 -1
+     (nil))
+(insn 37 36 39 6 (set (mem/v/j:QI (plus:SI (reg/f:SI 125)
+                (reg:SI 114 [ D.5785 ])) [0 wake_order S1 A8])
+        (reg:QI 126)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:273 -1
+     (nil))
+(jump_insn 39 37 40 6 (set (pc)
+        (label_ref 38)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:273 -1
+     (nil)
+ -> 38)
+(barrier 40 39 41)
+(code_label 41 40 42 7 3 "" [2 uses])
+(note 42 41 43 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 43 42 44 7 (set (reg:SI 0 r0)
+        (const_int 100 [0x64])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:279 -1
+     (nil))
+(call_insn 44 43 45 7 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("atomTimerDelay") [flags 0x41]  <function_decl 0x2b0f36cd4000 atomTimerDelay>) [0 atomTimerDelay S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:279 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:SI ("atomTimerDelay") [flags 0x41]  <function_decl 0x2b0f36cd4000 atomTimerDelay>)
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(jump_insn 45 44 46 7 (set (pc)
+        (label_ref 41)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:279 -1
+     (nil)
+ -> 41)
+(barrier 46 45 0)
+
+;; Function test_start (test_start, funcdef_no=9, decl_uid=5688, cgraph_uid=9, symbol_order=14)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+;; Generating RTL for gimple basic block 9
+
+;; Generating RTL for gimple basic block 10
+
+;; Generating RTL for gimple basic block 11
+
+;; Generating RTL for gimple basic block 12
+
+;; Generating RTL for gimple basic block 13
+
+;; Generating RTL for gimple basic block 14
+
+;; Generating RTL for gimple basic block 15
+
+;; Generating RTL for gimple basic block 16
+
+;; Generating RTL for gimple basic block 17
+
+;; Generating RTL for gimple basic block 18
+
+;; Generating RTL for gimple basic block 19
+
+;; Generating RTL for gimple basic block 20
+
+;; Generating RTL for gimple basic block 21
+
+;; Generating RTL for gimple basic block 22
+
+;; Generating RTL for gimple basic block 23
+Edge 4->6 redirected to 26
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Removing jump 261.
+Merging block 26 into block 25...
+Merged blocks 25 and 26.
+Merged 25 and 26 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 7 NOTE_INSN_DELETED)
+(note 7 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 7 9 2 NOTE_INSN_FUNCTION_BEG)
+(debug_insn 9 2 10 2 (var_location:SI failures (const_int 0 [0])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:94 -1
+     (nil))
+(insn 10 9 11 2 (set (reg/f:SI 133)
+        (symbol_ref:SI ("*.LANCHOR0") [flags 0x182])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:97 -1
+     (nil))
+(insn 11 10 12 2 (set (reg:SI 1 r1)
+        (const_int 0 [0])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:97 -1
+     (nil))
+(insn 12 11 13 2 (set (reg:SI 0 r0)
+        (reg/f:SI 133)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:97 -1
+     (nil))
+(call_insn 13 12 14 2 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("atomSemCreate") [flags 0x41]  <function_decl 0x2b0f36d4b300 atomSemCreate>) [0 atomSemCreate S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:97 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:SI ("atomSemCreate") [flags 0x41]  <function_decl 0x2b0f36d4b300 atomSemCreate>)
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:QI (use (reg:SI 1 r1))
+                (nil)))))
+(insn 14 13 15 2 (set (reg:SI 134)
+        (reg:SI 0 r0)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:97 -1
+     (nil))
+(insn 15 14 16 2 (set (reg:SI 112 [ D.5796 ])
+        (reg:SI 134)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:97 -1
+     (nil))
+(insn 16 15 17 2 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 112 [ D.5796 ])
+            (const_int 0 [0]))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:97 -1
+     (nil))
+(jump_insn 17 16 18 2 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 25)
+            (pc))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:97 -1
+     (int_list:REG_BR_PROB 6100 (nil))
+ -> 25)
+(note 18 17 19 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 19 18 20 4 (set (reg:SI 135)
+        (symbol_ref/v/f:SI ("*.LC1") [flags 0x82]  <var_decl 0x2b0f36d66e10 *.LC1>)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:99 -1
+     (nil))
+(insn 20 19 21 4 (set (reg:SI 0 r0)
+        (reg:SI 135)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:99 -1
+     (nil))
+(call_insn 21 20 22 4 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("puts") [flags 0x41]  <function_decl 0x2b0f36a18500 __builtin_puts>) [0 __builtin_puts S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:99 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:SI ("puts") [flags 0x41]  <function_decl 0x2b0f36a18500 __builtin_puts>)
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(debug_insn 22 21 6 4 (var_location:SI failures (const_int 1 [0x1])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:100 -1
+     (nil))
+(insn 6 22 23 4 (set (reg/v:SI 110 [ failures ])
+        (const_int 1 [0x1])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:100 -1
+     (nil))
+(jump_insn 23 6 24 4 (set (pc)
+        (label_ref 257)) -1
+     (nil)
+ -> 257)
+(barrier 24 23 25)
+(code_label 25 24 26 5 9 "" [1 uses])
+(note 26 25 27 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 27 26 28 5 (set (reg:SI 136)
+        (symbol_ref:SI ("test_thread_func") [flags 0x3]  <function_decl 0x2b0f36d4b800 test_thread_func>)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:105 -1
+     (nil))
+(insn 28 27 29 5 (set (reg/f:SI 137)
+        (symbol_ref:SI ("*.LANCHOR3") [flags 0x182])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:105 -1
+     (nil))
+(insn 29 28 30 5 (set (reg:SI 138)
+        (const_int 1 [0x1])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:105 -1
+     (nil))
+(insn 30 29 31 5 (set (mem:SI (plus:SI (reg/f:SI 107 virtual-outgoing-args)
+                (const_int 8 [0x8])) [0  S4 A32])
+        (reg:SI 138)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:105 -1
+     (nil))
+(insn 31 30 32 5 (set (reg:SI 139)
+        (const_int 1024 [0x400])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:105 -1
+     (nil))
+(insn 32 31 33 5 (set (mem:SI (plus:SI (reg/f:SI 107 virtual-outgoing-args)
+                (const_int 4 [0x4])) [0  S4 A32])
+        (reg:SI 139)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:105 -1
+     (nil))
+(insn 33 32 34 5 (set (reg/f:SI 140)
+        (symbol_ref:SI ("*.LANCHOR4") [flags 0x182])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:105 -1
+     (nil))
+(insn 34 33 35 5 (set (mem:SI (reg/f:SI 107 virtual-outgoing-args) [0  S4 A32])
+        (reg/f:SI 140)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:105 -1
+     (nil))
+(insn 35 34 36 5 (set (reg:SI 3 r3)
+        (const_int 1 [0x1])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:105 -1
+     (nil))
+(insn 36 35 37 5 (set (reg:SI 2 r2)
+        (reg:SI 136)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:105 -1
+     (nil))
+(insn 37 36 38 5 (set (reg:SI 1 r1)
+        (const_int 17 [0x11])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:105 -1
+     (nil))
+(insn 38 37 39 5 (set (reg:SI 0 r0)
+        (reg/f:SI 137)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:105 -1
+     (nil))
+(call_insn 39 38 40 5 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("atomThreadCreate") [flags 0x41]  <function_decl 0x2b0f36cd4d00 atomThreadCreate>) [0 atomThreadCreate S4 A32])
+                    (const_int 16 [0x10])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:105 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:SI ("atomThreadCreate") [flags 0x41]  <function_decl 0x2b0f36cd4d00 atomThreadCreate>)
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:QI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (expr_list:SI (use (reg:SI 3 r3))
+                        (expr_list:SI (use (mem/f:SI (reg/f:SI 107 virtual-outgoing-args) [0  S4 A32]))
+                            (expr_list:SI (use (mem:SI (plus:SI (reg/f:SI 107 virtual-outgoing-args)
+                                            (const_int 4 [0x4])) [0  S4 A32]))
+                                (expr_list:QI (use (mem:SI (plus:SI (reg/f:SI 107 virtual-outgoing-args)
+                                                (const_int 8 [0x8])) [0  S1 A32]))
+                                    (nil))))))))))
+(insn 40 39 41 5 (set (reg:SI 141)
+        (reg:SI 0 r0)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:105 -1
+     (nil))
+(insn 41 40 42 5 (set (reg:SI 113 [ D.5796 ])
+        (reg:SI 141)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:105 -1
+     (nil))
+(insn 42 41 43 5 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 113 [ D.5796 ])
+            (const_int 0 [0]))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:105 -1
+     (nil))
+(jump_insn 43 42 44 5 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref:SI 270)
+            (pc))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:105 194 {arm_cond_branch}
+     (int_list:REG_BR_PROB 7100 (nil))
+ -> 270)
+(note 44 43 45 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 45 44 46 6 (set (reg:SI 142)
+        (symbol_ref/v/f:SI ("*.LC2") [flags 0x82]  <var_decl 0x2b0f36d66f30 *.LC2>)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:110 -1
+     (nil))
+(insn 46 45 47 6 (set (reg:SI 0 r0)
+        (reg:SI 142)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:110 -1
+     (nil))
+(call_insn 47 46 48 6 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("puts") [flags 0x41]  <function_decl 0x2b0f36a18500 __builtin_puts>) [0 __builtin_puts S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:110 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:SI ("puts") [flags 0x41]  <function_decl 0x2b0f36a18500 __builtin_puts>)
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(debug_insn 48 47 4 6 (var_location:SI failures (const_int 1 [0x1])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:111 -1
+     (nil))
+(insn 4 48 267 6 (set (reg/v:SI 110 [ failures ])
+        (const_int 1 [0x1])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:111 -1
+     (nil))
+(jump_insn 267 4 268 6 (set (pc)
+        (label_ref 49)) -1
+     (nil)
+ -> 49)
+(barrier 268 267 270)
+(code_label 270 268 269 7 19 "" [1 uses])
+(note 269 270 3 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 3 269 49 7 (set (reg/v:SI 110 [ failures ])
+        (const_int 0 [0])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:94 -1
+     (nil))
+(code_label 49 3 50 8 11 "" [1 uses])
+(note 50 49 51 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 51 50 52 8 (var_location:SI failures (reg/v:SI 110 [ failures ])) -1
+     (nil))
+(insn 52 51 53 8 (set (reg:SI 0 r0)
+        (const_int 25 [0x19])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:115 -1
+     (nil))
+(call_insn 53 52 54 8 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("atomTimerDelay") [flags 0x41]  <function_decl 0x2b0f36cd4000 atomTimerDelay>) [0 atomTimerDelay S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:115 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:SI ("atomTimerDelay") [flags 0x41]  <function_decl 0x2b0f36cd4000 atomTimerDelay>)
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 54 53 55 8 (set (reg:SI 143)
+        (symbol_ref:SI ("test_thread_func") [flags 0x3]  <function_decl 0x2b0f36d4b800 test_thread_func>)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:118 -1
+     (nil))
+(insn 55 54 56 8 (set (reg/f:SI 144)
+        (symbol_ref:SI ("*.LANCHOR3") [flags 0x182])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:118 -1
+     (nil))
+(insn 56 55 57 8 (set (reg:SI 145)
+        (plus:SI (reg/f:SI 144)
+            (const_int 1104 [0x450]))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:118 -1
+     (nil))
+(insn 57 56 58 8 (set (reg:SI 146)
+        (const_int 1 [0x1])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:118 -1
+     (nil))
+(insn 58 57 59 8 (set (mem:SI (plus:SI (reg/f:SI 107 virtual-outgoing-args)
+                (const_int 8 [0x8])) [0  S4 A32])
+        (reg:SI 146)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:118 -1
+     (nil))
+(insn 59 58 60 8 (set (reg:SI 147)
+        (const_int 1024 [0x400])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:118 -1
+     (nil))
+(insn 60 59 61 8 (set (mem:SI (plus:SI (reg/f:SI 107 virtual-outgoing-args)
+                (const_int 4 [0x4])) [0  S4 A32])
+        (reg:SI 147)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:118 -1
+     (nil))
+(insn 61 60 62 8 (set (reg/f:SI 148)
+        (symbol_ref:SI ("*.LANCHOR4") [flags 0x182])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:118 -1
+     (nil))
+(insn 62 61 63 8 (set (reg:SI 149)
+        (plus:SI (reg/f:SI 148)
+            (const_int 1024 [0x400]))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:118 -1
+     (nil))
+(insn 63 62 64 8 (set (mem:SI (reg/f:SI 107 virtual-outgoing-args) [0  S4 A32])
+        (reg:SI 149)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:118 -1
+     (nil))
+(insn 64 63 65 8 (set (reg:SI 3 r3)
+        (const_int 2 [0x2])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:118 -1
+     (nil))
+(insn 65 64 66 8 (set (reg:SI 2 r2)
+        (reg:SI 143)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:118 -1
+     (nil))
+(insn 66 65 67 8 (set (reg:SI 1 r1)
+        (const_int 17 [0x11])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:118 -1
+     (nil))
+(insn 67 66 68 8 (set (reg:SI 0 r0)
+        (reg:SI 145)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:118 -1
+     (nil))
+(call_insn 68 67 69 8 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("atomThreadCreate") [flags 0x41]  <function_decl 0x2b0f36cd4d00 atomThreadCreate>) [0 atomThreadCreate S4 A32])
+                    (const_int 16 [0x10])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:118 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:SI ("atomThreadCreate") [flags 0x41]  <function_decl 0x2b0f36cd4d00 atomThreadCreate>)
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:QI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (expr_list:SI (use (reg:SI 3 r3))
+                        (expr_list:SI (use (mem/f:SI (reg/f:SI 107 virtual-outgoing-args) [0  S4 A32]))
+                            (expr_list:SI (use (mem:SI (plus:SI (reg/f:SI 107 virtual-outgoing-args)
+                                            (const_int 4 [0x4])) [0  S4 A32]))
+                                (expr_list:QI (use (mem:SI (plus:SI (reg/f:SI 107 virtual-outgoing-args)
+                                                (const_int 8 [0x8])) [0  S1 A32]))
+                                    (nil))))))))))
+(insn 69 68 70 8 (set (reg:SI 150)
+        (reg:SI 0 r0)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:118 -1
+     (nil))
+(insn 70 69 71 8 (set (reg:SI 114 [ D.5796 ])
+        (reg:SI 150)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:118 -1
+     (nil))
+(insn 71 70 72 8 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 114 [ D.5796 ])
+            (const_int 0 [0]))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:118 -1
+     (nil))
+(jump_insn 72 71 73 8 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 79)
+            (pc))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:118 -1
+     (int_list:REG_BR_PROB 7100 (nil))
+ -> 79)
+(note 73 72 74 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 74 73 75 9 (set (reg:SI 151)
+        (symbol_ref/v/f:SI ("*.LC2") [flags 0x82]  <var_decl 0x2b0f36d66f30 *.LC2>)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:123 -1
+     (nil))
+(insn 75 74 76 9 (set (reg:SI 0 r0)
+        (reg:SI 151)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:123 -1
+     (nil))
+(call_insn 76 75 77 9 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("puts") [flags 0x41]  <function_decl 0x2b0f36a18500 __builtin_puts>) [0 __builtin_puts S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:123 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:SI ("puts") [flags 0x41]  <function_decl 0x2b0f36a18500 __builtin_puts>)
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 77 76 78 9 (set (reg/v:SI 110 [ failures ])
+        (plus:SI (reg/v:SI 110 [ failures ])
+            (const_int 1 [0x1]))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:124 -1
+     (nil))
+(debug_insn 78 77 79 9 (var_location:SI failures (reg/v:SI 110 [ failures ])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:124 -1
+     (nil))
+(code_label 79 78 80 10 12 "" [1 uses])
+(note 80 79 81 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 81 80 82 10 (var_location:SI failures (reg/v:SI 110 [ failures ])) -1
+     (nil))
+(insn 82 81 83 10 (set (reg:SI 0 r0)
+        (const_int 25 [0x19])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:128 -1
+     (nil))
+(call_insn 83 82 84 10 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("atomTimerDelay") [flags 0x41]  <function_decl 0x2b0f36cd4000 atomTimerDelay>) [0 atomTimerDelay S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:128 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:SI ("atomTimerDelay") [flags 0x41]  <function_decl 0x2b0f36cd4000 atomTimerDelay>)
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 84 83 85 10 (set (reg:SI 152)
+        (symbol_ref:SI ("test_thread_func") [flags 0x3]  <function_decl 0x2b0f36d4b800 test_thread_func>)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:131 -1
+     (nil))
+(insn 85 84 86 10 (set (reg/f:SI 153)
+        (symbol_ref:SI ("*.LANCHOR3") [flags 0x182])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:131 -1
+     (nil))
+(insn 86 85 87 10 (set (reg:SI 154)
+        (plus:SI (reg/f:SI 153)
+            (const_int 2208 [0x8a0]))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:131 -1
+     (nil))
+(insn 87 86 88 10 (set (reg:SI 155)
+        (const_int 1 [0x1])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:131 -1
+     (nil))
+(insn 88 87 89 10 (set (mem:SI (plus:SI (reg/f:SI 107 virtual-outgoing-args)
+                (const_int 8 [0x8])) [0  S4 A32])
+        (reg:SI 155)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:131 -1
+     (nil))
+(insn 89 88 90 10 (set (reg:SI 156)
+        (const_int 1024 [0x400])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:131 -1
+     (nil))
+(insn 90 89 91 10 (set (mem:SI (plus:SI (reg/f:SI 107 virtual-outgoing-args)
+                (const_int 4 [0x4])) [0  S4 A32])
+        (reg:SI 156)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:131 -1
+     (nil))
+(insn 91 90 92 10 (set (reg/f:SI 157)
+        (symbol_ref:SI ("*.LANCHOR4") [flags 0x182])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:131 -1
+     (nil))
+(insn 92 91 93 10 (set (reg:SI 158)
+        (plus:SI (reg/f:SI 157)
+            (const_int 2048 [0x800]))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:131 -1
+     (nil))
+(insn 93 92 94 10 (set (mem:SI (reg/f:SI 107 virtual-outgoing-args) [0  S4 A32])
+        (reg:SI 158)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:131 -1
+     (nil))
+(insn 94 93 95 10 (set (reg:SI 3 r3)
+        (const_int 3 [0x3])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:131 -1
+     (nil))
+(insn 95 94 96 10 (set (reg:SI 2 r2)
+        (reg:SI 152)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:131 -1
+     (nil))
+(insn 96 95 97 10 (set (reg:SI 1 r1)
+        (const_int 16 [0x10])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:131 -1
+     (nil))
+(insn 97 96 98 10 (set (reg:SI 0 r0)
+        (reg:SI 154)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:131 -1
+     (nil))
+(call_insn 98 97 99 10 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("atomThreadCreate") [flags 0x41]  <function_decl 0x2b0f36cd4d00 atomThreadCreate>) [0 atomThreadCreate S4 A32])
+                    (const_int 16 [0x10])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:131 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:SI ("atomThreadCreate") [flags 0x41]  <function_decl 0x2b0f36cd4d00 atomThreadCreate>)
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:QI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (expr_list:SI (use (reg:SI 3 r3))
+                        (expr_list:SI (use (mem/f:SI (reg/f:SI 107 virtual-outgoing-args) [0  S4 A32]))
+                            (expr_list:SI (use (mem:SI (plus:SI (reg/f:SI 107 virtual-outgoing-args)
+                                            (const_int 4 [0x4])) [0  S4 A32]))
+                                (expr_list:QI (use (mem:SI (plus:SI (reg/f:SI 107 virtual-outgoing-args)
+                                                (const_int 8 [0x8])) [0  S1 A32]))
+                                    (nil))))))))))
+(insn 99 98 100 10 (set (reg:SI 159)
+        (reg:SI 0 r0)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:131 -1
+     (nil))
+(insn 100 99 101 10 (set (reg:SI 115 [ D.5796 ])
+        (reg:SI 159)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:131 -1
+     (nil))
+(insn 101 100 102 10 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 115 [ D.5796 ])
+            (const_int 0 [0]))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:131 -1
+     (nil))
+(jump_insn 102 101 103 10 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 109)
+            (pc))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:131 -1
+     (int_list:REG_BR_PROB 7100 (nil))
+ -> 109)
+(note 103 102 104 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 104 103 105 11 (set (reg:SI 160)
+        (symbol_ref/v/f:SI ("*.LC2") [flags 0x82]  <var_decl 0x2b0f36d66f30 *.LC2>)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:136 -1
+     (nil))
+(insn 105 104 106 11 (set (reg:SI 0 r0)
+        (reg:SI 160)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:136 -1
+     (nil))
+(call_insn 106 105 107 11 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("puts") [flags 0x41]  <function_decl 0x2b0f36a18500 __builtin_puts>) [0 __builtin_puts S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:136 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:SI ("puts") [flags 0x41]  <function_decl 0x2b0f36a18500 __builtin_puts>)
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 107 106 108 11 (set (reg/v:SI 110 [ failures ])
+        (plus:SI (reg/v:SI 110 [ failures ])
+            (const_int 1 [0x1]))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:137 -1
+     (nil))
+(debug_insn 108 107 109 11 (var_location:SI failures (reg/v:SI 110 [ failures ])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:137 -1
+     (nil))
+(code_label 109 108 110 12 13 "" [1 uses])
+(note 110 109 111 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 111 110 112 12 (var_location:SI failures (reg/v:SI 110 [ failures ])) -1
+     (nil))
+(insn 112 111 113 12 (set (reg:SI 0 r0)
+        (const_int 25 [0x19])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:141 -1
+     (nil))
+(call_insn 113 112 114 12 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("atomTimerDelay") [flags 0x41]  <function_decl 0x2b0f36cd4000 atomTimerDelay>) [0 atomTimerDelay S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:141 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:SI ("atomTimerDelay") [flags 0x41]  <function_decl 0x2b0f36cd4000 atomTimerDelay>)
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 114 113 115 12 (set (reg:SI 161)
+        (symbol_ref:SI ("test_thread_func") [flags 0x3]  <function_decl 0x2b0f36d4b800 test_thread_func>)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:144 -1
+     (nil))
+(insn 115 114 116 12 (set (reg/f:SI 162)
+        (symbol_ref:SI ("*.LANCHOR3") [flags 0x182])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:144 -1
+     (nil))
+(insn 116 115 117 12 (set (reg:SI 163)
+        (plus:SI (reg/f:SI 162)
+            (const_int 3312 [0xcf0]))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:144 -1
+     (nil))
+(insn 117 116 118 12 (set (reg:SI 164)
+        (const_int 1 [0x1])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:144 -1
+     (nil))
+(insn 118 117 119 12 (set (mem:SI (plus:SI (reg/f:SI 107 virtual-outgoing-args)
+                (const_int 8 [0x8])) [0  S4 A32])
+        (reg:SI 164)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:144 -1
+     (nil))
+(insn 119 118 120 12 (set (reg:SI 165)
+        (const_int 1024 [0x400])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:144 -1
+     (nil))
+(insn 120 119 121 12 (set (mem:SI (plus:SI (reg/f:SI 107 virtual-outgoing-args)
+                (const_int 4 [0x4])) [0  S4 A32])
+        (reg:SI 165)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:144 -1
+     (nil))
+(insn 121 120 122 12 (set (reg/f:SI 166)
+        (symbol_ref:SI ("*.LANCHOR4") [flags 0x182])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:144 -1
+     (nil))
+(insn 122 121 123 12 (set (reg:SI 167)
+        (plus:SI (reg/f:SI 166)
+            (const_int 3072 [0xc00]))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:144 -1
+     (nil))
+(insn 123 122 124 12 (set (mem:SI (reg/f:SI 107 virtual-outgoing-args) [0  S4 A32])
+        (reg:SI 167)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:144 -1
+     (nil))
+(insn 124 123 125 12 (set (reg:SI 3 r3)
+        (const_int 4 [0x4])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:144 -1
+     (nil))
+(insn 125 124 126 12 (set (reg:SI 2 r2)
+        (reg:SI 161)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:144 -1
+     (nil))
+(insn 126 125 127 12 (set (reg:SI 1 r1)
+        (const_int 16 [0x10])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:144 -1
+     (nil))
+(insn 127 126 128 12 (set (reg:SI 0 r0)
+        (reg:SI 163)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:144 -1
+     (nil))
+(call_insn 128 127 129 12 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("atomThreadCreate") [flags 0x41]  <function_decl 0x2b0f36cd4d00 atomThreadCreate>) [0 atomThreadCreate S4 A32])
+                    (const_int 16 [0x10])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:144 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:SI ("atomThreadCreate") [flags 0x41]  <function_decl 0x2b0f36cd4d00 atomThreadCreate>)
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:QI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (expr_list:SI (use (reg:SI 3 r3))
+                        (expr_list:SI (use (mem/f:SI (reg/f:SI 107 virtual-outgoing-args) [0  S4 A32]))
+                            (expr_list:SI (use (mem:SI (plus:SI (reg/f:SI 107 virtual-outgoing-args)
+                                            (const_int 4 [0x4])) [0  S4 A32]))
+                                (expr_list:QI (use (mem:SI (plus:SI (reg/f:SI 107 virtual-outgoing-args)
+                                                (const_int 8 [0x8])) [0  S1 A32]))
+                                    (nil))))))))))
+(insn 129 128 130 12 (set (reg:SI 168)
+        (reg:SI 0 r0)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:144 -1
+     (nil))
+(insn 130 129 131 12 (set (reg:SI 116 [ D.5796 ])
+        (reg:SI 168)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:144 -1
+     (nil))
+(insn 131 130 132 12 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 116 [ D.5796 ])
+            (const_int 0 [0]))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:144 -1
+     (nil))
+(jump_insn 132 131 133 12 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 139)
+            (pc))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:144 -1
+     (int_list:REG_BR_PROB 7100 (nil))
+ -> 139)
+(note 133 132 134 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn 134 133 135 13 (set (reg:SI 169)
+        (symbol_ref/v/f:SI ("*.LC2") [flags 0x82]  <var_decl 0x2b0f36d66f30 *.LC2>)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:149 -1
+     (nil))
+(insn 135 134 136 13 (set (reg:SI 0 r0)
+        (reg:SI 169)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:149 -1
+     (nil))
+(call_insn 136 135 137 13 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("puts") [flags 0x41]  <function_decl 0x2b0f36a18500 __builtin_puts>) [0 __builtin_puts S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:149 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:SI ("puts") [flags 0x41]  <function_decl 0x2b0f36a18500 __builtin_puts>)
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 137 136 138 13 (set (reg/v:SI 110 [ failures ])
+        (plus:SI (reg/v:SI 110 [ failures ])
+            (const_int 1 [0x1]))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:150 -1
+     (nil))
+(debug_insn 138 137 139 13 (var_location:SI failures (reg/v:SI 110 [ failures ])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:150 -1
+     (nil))
+(code_label 139 138 140 14 14 "" [1 uses])
+(note 140 139 141 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 141 140 142 14 (var_location:SI failures (reg/v:SI 110 [ failures ])) -1
+     (nil))
+(insn 142 141 143 14 (set (reg:SI 0 r0)
+        (const_int 25 [0x19])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:154 -1
+     (nil))
+(call_insn 143 142 144 14 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("atomTimerDelay") [flags 0x41]  <function_decl 0x2b0f36cd4000 atomTimerDelay>) [0 atomTimerDelay S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:154 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:SI ("atomTimerDelay") [flags 0x41]  <function_decl 0x2b0f36cd4000 atomTimerDelay>)
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 144 143 145 14 (set (reg/f:SI 170)
+        (symbol_ref:SI ("*.LANCHOR1") [flags 0x182])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:162 -1
+     (nil))
+(insn 145 144 146 14 (set (reg:SI 171)
+        (const_int 0 [0])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:162 -1
+     (nil))
+(insn 146 145 147 14 (set (reg:QI 172)
+        (subreg:QI (reg:SI 171) 0)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:162 -1
+     (nil))
+(insn 147 146 148 14 (set (mem/v/c:QI (reg/f:SI 170) [0 wake_cnt+0 S1 A8])
+        (reg:QI 172)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:162 -1
+     (nil))
+(debug_insn 148 147 149 14 (var_location:SI i (const_int 0 [0])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:169 -1
+     (nil))
+(debug_insn 149 148 150 14 (var_location:SI i (const_int 0 [0])) -1
+     (nil))
+(debug_insn 150 149 5 14 (var_location:SI failures (reg/v:SI 110 [ failures ])) -1
+     (nil))
+(insn 5 150 177 14 (set (reg:SI 111 [ D.5795 ])
+        (const_int 4 [0x4])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:162 -1
+     (nil))
+(code_label 177 5 151 15 16 "" [1 uses])
+(note 151 177 152 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 152 151 153 15 (var_location:SI i (minus:SI (const_int 4 [0x4])
+        (reg:SI 111 [ D.5795 ]))) -1
+     (nil))
+(debug_insn 153 152 154 15 (var_location:SI failures (reg/v:SI 110 [ failures ])) -1
+     (nil))
+(insn 154 153 155 15 (set (reg/f:SI 173)
+        (symbol_ref:SI ("*.LANCHOR0") [flags 0x182])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:172 -1
+     (nil))
+(insn 155 154 156 15 (set (reg:SI 0 r0)
+        (reg/f:SI 173)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:172 -1
+     (nil))
+(call_insn 156 155 157 15 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("atomSemPut") [flags 0x41]  <function_decl 0x2b0f36d4b600 atomSemPut>) [0 atomSemPut S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:172 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:SI ("atomSemPut") [flags 0x41]  <function_decl 0x2b0f36d4b600 atomSemPut>)
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 157 156 158 15 (set (reg:SI 174)
+        (reg:SI 0 r0)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:172 -1
+     (nil))
+(insn 158 157 159 15 (set (reg:SI 117 [ D.5796 ])
+        (reg:SI 174)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:172 -1
+     (nil))
+(insn 159 158 160 15 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 117 [ D.5796 ])
+            (const_int 0 [0]))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:172 -1
+     (nil))
+(jump_insn 160 159 161 15 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 167)
+            (pc))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:172 -1
+     (int_list:REG_BR_PROB 7100 (nil))
+ -> 167)
+(note 161 160 162 16 [bb 16] NOTE_INSN_BASIC_BLOCK)
+(insn 162 161 163 16 (set (reg:SI 175)
+        (symbol_ref/v/f:SI ("*.LC3") [flags 0x82]  <var_decl 0x2b0f36d66ea0 *.LC3>)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:174 -1
+     (nil))
+(insn 163 162 164 16 (set (reg:SI 0 r0)
+        (reg:SI 175)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:174 -1
+     (nil))
+(call_insn 164 163 165 16 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("puts") [flags 0x41]  <function_decl 0x2b0f36a18500 __builtin_puts>) [0 __builtin_puts S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:174 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:SI ("puts") [flags 0x41]  <function_decl 0x2b0f36a18500 __builtin_puts>)
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 165 164 166 16 (set (reg/v:SI 110 [ failures ])
+        (plus:SI (reg/v:SI 110 [ failures ])
+            (const_int 1 [0x1]))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:175 -1
+     (nil))
+(debug_insn 166 165 167 16 (var_location:SI failures (reg/v:SI 110 [ failures ])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:175 -1
+     (nil))
+(code_label 167 166 168 17 15 "" [1 uses])
+(note 168 167 169 17 [bb 17] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 169 168 170 17 (var_location:SI failures (reg/v:SI 110 [ failures ])) -1
+     (nil))
+(insn 170 169 171 17 (set (reg:SI 0 r0)
+        (const_int 25 [0x19])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:179 -1
+     (nil))
+(call_insn 171 170 172 17 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("atomTimerDelay") [flags 0x41]  <function_decl 0x2b0f36cd4000 atomTimerDelay>) [0 atomTimerDelay S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:179 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:SI ("atomTimerDelay") [flags 0x41]  <function_decl 0x2b0f36cd4000 atomTimerDelay>)
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(debug_insn 172 171 173 17 (var_location:SI D#1 (minus:SI (const_int 5 [0x5])
+        (reg:SI 111 [ D.5795 ]))) -1
+     (nil))
+(debug_insn 173 172 174 17 (var_location:SI i (debug_expr:SI D#1)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:169 -1
+     (nil))
+(debug_insn 174 173 175 17 (var_location:SI i (debug_expr:SI D#1)) -1
+     (nil))
+(debug_insn 175 174 176 17 (var_location:SI failures (reg/v:SI 110 [ failures ])) -1
+     (nil))
+(insn 176 175 178 17 (set (reg:SI 111 [ D.5795 ])
+        (plus:SI (reg:SI 111 [ D.5795 ])
+            (const_int -1 [0xffffffffffffffff]))) -1
+     (nil))
+(insn 178 176 179 17 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 111 [ D.5795 ])
+            (const_int 0 [0]))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:169 -1
+     (nil))
+(jump_insn 179 178 180 17 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 177)
+            (pc))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:169 -1
+     (int_list:REG_BR_PROB 7500 (nil))
+ -> 177)
+(note 180 179 181 18 [bb 18] NOTE_INSN_BASIC_BLOCK)
+(insn 181 180 182 18 (set (reg/f:SI 176)
+        (symbol_ref:SI ("*.LANCHOR2") [flags 0x182])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:183 -1
+     (nil))
+(insn 182 181 183 18 (set (reg:SI 178)
+        (zero_extend:SI (mem/v/j/c:QI (reg/f:SI 176) [0 wake_order+0 S1 A8]))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:183 -1
+     (nil))
+(insn 183 182 184 18 (set (reg:QI 177)
+        (subreg:QI (reg:SI 178) 0)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:183 -1
+     (nil))
+(insn 184 183 185 18 (set (reg:SI 118 [ D.5796 ])
+        (zero_extend:SI (reg:QI 177))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:183 -1
+     (nil))
+(insn 185 184 186 18 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 118 [ D.5796 ])
+            (const_int 3 [0x3]))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:183 -1
+     (nil))
+(jump_insn 186 185 187 18 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 211)
+            (pc))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:183 -1
+     (int_list:REG_BR_PROB 5123 (nil))
+ -> 211)
+(note 187 186 188 19 [bb 19] NOTE_INSN_BASIC_BLOCK)
+(insn 188 187 190 19 (set (reg/f:SI 179)
+        (symbol_ref:SI ("*.LANCHOR2") [flags 0x182])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:183 -1
+     (nil))
+(insn 190 188 191 19 (set (reg:SI 182)
+        (zero_extend:SI (mem/v/j/c:QI (plus:SI (reg/f:SI 179)
+                    (const_int 1 [0x1])) [0 wake_order+1 S1 A8]))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:183 -1
+     (nil))
+(insn 191 190 192 19 (set (reg:QI 181)
+        (subreg:QI (reg:SI 182) 0)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:183 -1
+     (nil))
+(insn 192 191 193 19 (set (reg:SI 119 [ D.5796 ])
+        (zero_extend:SI (reg:QI 181))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:183 -1
+     (nil))
+(insn 193 192 194 19 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 119 [ D.5796 ])
+            (const_int 4 [0x4]))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:183 -1
+     (nil))
+(jump_insn 194 193 195 19 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 211)
+            (pc))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:183 -1
+     (int_list:REG_BR_PROB 7200 (nil))
+ -> 211)
+(note 195 194 196 20 [bb 20] NOTE_INSN_BASIC_BLOCK)
+(insn 196 195 198 20 (set (reg/f:SI 183)
+        (symbol_ref:SI ("*.LANCHOR2") [flags 0x182])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:184 -1
+     (nil))
+(insn 198 196 199 20 (set (reg:SI 186)
+        (zero_extend:SI (mem/v/j/c:QI (plus:SI (reg/f:SI 183)
+                    (const_int 2 [0x2])) [0 wake_order+2 S1 A8]))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:184 -1
+     (nil))
+(insn 199 198 200 20 (set (reg:QI 185)
+        (subreg:QI (reg:SI 186) 0)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:184 -1
+     (nil))
+(insn 200 199 201 20 (set (reg:SI 120 [ D.5796 ])
+        (zero_extend:SI (reg:QI 185))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:184 -1
+     (nil))
+(insn 201 200 202 20 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 120 [ D.5796 ])
+            (const_int 1 [0x1]))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:184 -1
+     (nil))
+(jump_insn 202 201 203 20 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 211)
+            (pc))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:184 -1
+     (int_list:REG_BR_PROB 7200 (nil))
+ -> 211)
+(note 203 202 204 21 [bb 21] NOTE_INSN_BASIC_BLOCK)
+(insn 204 203 206 21 (set (reg/f:SI 187)
+        (symbol_ref:SI ("*.LANCHOR2") [flags 0x182])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:184 -1
+     (nil))
+(insn 206 204 207 21 (set (reg:SI 190)
+        (zero_extend:SI (mem/v/j/c:QI (plus:SI (reg/f:SI 187)
+                    (const_int 3 [0x3])) [0 wake_order+3 S1 A8]))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:184 -1
+     (nil))
+(insn 207 206 208 21 (set (reg:QI 189)
+        (subreg:QI (reg:SI 190) 0)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:184 -1
+     (nil))
+(insn 208 207 209 21 (set (reg:SI 121 [ D.5796 ])
+        (zero_extend:SI (reg:QI 189))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:184 -1
+     (nil))
+(insn 209 208 210 21 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 121 [ D.5796 ])
+            (const_int 2 [0x2]))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:184 -1
+     (nil))
+(jump_insn 210 209 211 21 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 241)
+            (pc))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:184 -1
+     (int_list:REG_BR_PROB 2800 (nil))
+ -> 241)
+(code_label 211 210 212 22 17 "" [3 uses])
+(note 212 211 213 22 [bb 22] NOTE_INSN_BASIC_BLOCK)
+(insn 213 212 214 22 (set (reg/f:SI 191)
+        (symbol_ref:SI ("*.LANCHOR2") [flags 0x182])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:187 -1
+     (nil))
+(insn 214 213 215 22 (set (reg:SI 193)
+        (zero_extend:SI (mem/v/j/c:QI (reg/f:SI 191) [0 wake_order+0 S1 A8]))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:187 -1
+     (nil))
+(insn 215 214 216 22 (set (reg:QI 192)
+        (subreg:QI (reg:SI 193) 0)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:187 -1
+     (nil))
+(insn 216 215 217 22 (set (reg:SI 122 [ D.5796 ])
+        (zero_extend:SI (reg:QI 192))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:187 -1
+     (nil))
+(insn 217 216 219 22 (set (reg/f:SI 194)
+        (symbol_ref:SI ("*.LANCHOR2") [flags 0x182])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:187 -1
+     (nil))
+(insn 219 217 220 22 (set (reg:SI 197)
+        (zero_extend:SI (mem/v/j/c:QI (plus:SI (reg/f:SI 194)
+                    (const_int 1 [0x1])) [0 wake_order+1 S1 A8]))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:187 -1
+     (nil))
+(insn 220 219 221 22 (set (reg:QI 196)
+        (subreg:QI (reg:SI 197) 0)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:187 -1
+     (nil))
+(insn 221 220 222 22 (set (reg:SI 124 [ D.5796 ])
+        (zero_extend:SI (reg:QI 196))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:187 -1
+     (nil))
+(insn 222 221 224 22 (set (reg/f:SI 198)
+        (symbol_ref:SI ("*.LANCHOR2") [flags 0x182])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:187 -1
+     (nil))
+(insn 224 222 225 22 (set (reg:SI 201)
+        (zero_extend:SI (mem/v/j/c:QI (plus:SI (reg/f:SI 198)
+                    (const_int 2 [0x2])) [0 wake_order+2 S1 A8]))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:187 -1
+     (nil))
+(insn 225 224 226 22 (set (reg:QI 200)
+        (subreg:QI (reg:SI 201) 0)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:187 -1
+     (nil))
+(insn 226 225 227 22 (set (reg:SI 126 [ D.5796 ])
+        (zero_extend:SI (reg:QI 200))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:187 -1
+     (nil))
+(insn 227 226 229 22 (set (reg/f:SI 202)
+        (symbol_ref:SI ("*.LANCHOR2") [flags 0x182])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:187 -1
+     (nil))
+(insn 229 227 230 22 (set (reg:SI 205)
+        (zero_extend:SI (mem/v/j/c:QI (plus:SI (reg/f:SI 202)
+                    (const_int 3 [0x3])) [0 wake_order+3 S1 A8]))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:187 -1
+     (nil))
+(insn 230 229 231 22 (set (reg:QI 204)
+        (subreg:QI (reg:SI 205) 0)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:187 -1
+     (nil))
+(insn 231 230 232 22 (set (reg:SI 128 [ D.5796 ])
+        (zero_extend:SI (reg:QI 204))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:187 -1
+     (nil))
+(insn 232 231 233 22 (set (reg:SI 206)
+        (symbol_ref/v/f:SI ("*.LC4") [flags 0x82]  <var_decl 0x2b0f36d94000 *.LC4>)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:186 -1
+     (nil))
+(insn 233 232 234 22 (set (mem:SI (reg/f:SI 107 virtual-outgoing-args) [0  S4 A32])
+        (reg:SI 128 [ D.5796 ])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:186 -1
+     (nil))
+(insn 234 233 235 22 (set (reg:SI 3 r3)
+        (reg:SI 126 [ D.5796 ])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:186 -1
+     (nil))
+(insn 235 234 236 22 (set (reg:SI 2 r2)
+        (reg:SI 124 [ D.5796 ])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:186 -1
+     (nil))
+(insn 236 235 237 22 (set (reg:SI 1 r1)
+        (reg:SI 122 [ D.5796 ])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:186 -1
+     (nil))
+(insn 237 236 238 22 (set (reg:SI 0 r0)
+        (reg:SI 206)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:186 -1
+     (nil))
+(call_insn 238 237 239 22 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("printf") [flags 0x41]  <function_decl 0x2b0f36a15e00 printf>) [0 __builtin_printf S4 A32])
+                    (const_int 8 [0x8])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:186 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:SI ("printf") [flags 0x41]  <function_decl 0x2b0f36a15e00 printf>)
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (expr_list:SI (use (reg:SI 3 r3))
+                        (expr_list:SI (use (mem:SI (reg/f:SI 107 virtual-outgoing-args) [0  S4 A32]))
+                            (nil))))))))
+(insn 239 238 240 22 (set (reg/v:SI 110 [ failures ])
+        (plus:SI (reg/v:SI 110 [ failures ])
+            (const_int 1 [0x1]))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:188 -1
+     (nil))
+(debug_insn 240 239 241 22 (var_location:SI failures (reg/v:SI 110 [ failures ])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:188 -1
+     (nil))
+(code_label 241 240 242 23 18 "" [1 uses])
+(note 242 241 243 23 [bb 23] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 243 242 244 23 (var_location:SI failures (reg/v:SI 110 [ failures ])) -1
+     (nil))
+(insn 244 243 245 23 (set (reg/f:SI 207)
+        (symbol_ref:SI ("*.LANCHOR0") [flags 0x182])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:192 -1
+     (nil))
+(insn 245 244 246 23 (set (reg:SI 0 r0)
+        (reg/f:SI 207)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:192 -1
+     (nil))
+(call_insn 246 245 247 23 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("atomSemDelete") [flags 0x41]  <function_decl 0x2b0f36d4b400 atomSemDelete>) [0 atomSemDelete S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:192 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:SI ("atomSemDelete") [flags 0x41]  <function_decl 0x2b0f36d4b400 atomSemDelete>)
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 247 246 248 23 (set (reg:SI 208)
+        (reg:SI 0 r0)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:192 -1
+     (nil))
+(insn 248 247 249 23 (set (reg:SI 130 [ D.5796 ])
+        (reg:SI 208)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:192 -1
+     (nil))
+(insn 249 248 250 23 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 130 [ D.5796 ])
+            (const_int 0 [0]))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:192 -1
+     (nil))
+(jump_insn 250 249 251 23 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 257)
+            (pc))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:192 -1
+     (int_list:REG_BR_PROB 6102 (nil))
+ -> 257)
+(note 251 250 252 24 [bb 24] NOTE_INSN_BASIC_BLOCK)
+(insn 252 251 253 24 (set (reg:SI 209)
+        (symbol_ref/v/f:SI ("*.LC5") [flags 0x82]  <var_decl 0x2b0f36d94090 *.LC5>)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:194 -1
+     (nil))
+(insn 253 252 254 24 (set (reg:SI 0 r0)
+        (reg:SI 209)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:194 -1
+     (nil))
+(call_insn 254 253 255 24 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("puts") [flags 0x41]  <function_decl 0x2b0f36a18500 __builtin_puts>) [0 __builtin_puts S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:194 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:SI ("puts") [flags 0x41]  <function_decl 0x2b0f36a18500 __builtin_puts>)
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 255 254 256 24 (set (reg/v:SI 110 [ failures ])
+        (plus:SI (reg/v:SI 110 [ failures ])
+            (const_int 1 [0x1]))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:195 -1
+     (nil))
+(debug_insn 256 255 257 24 (var_location:SI failures (reg/v:SI 110 [ failures ])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:195 -1
+     (nil))
+(code_label 257 256 258 25 10 "" [2 uses])
+(note 258 257 259 25 [bb 25] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 259 258 260 25 (var_location:SI failures (reg/v:SI 110 [ failures ])) -1
+     (nil))
+(insn 260 259 264 25 (set (reg:SI 132 [ <retval> ])
+        (reg/v:SI 110 [ failures ])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:233 -1
+     (nil))
+(insn 264 260 265 25 (set (reg/i:SI 0 r0)
+        (reg:SI 132 [ <retval> ])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:235 -1
+     (nil))
+(insn 265 264 0 25 (use (reg/i:SI 0 r0)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/../../tests/sem3.c:235 -1
+     (nil))

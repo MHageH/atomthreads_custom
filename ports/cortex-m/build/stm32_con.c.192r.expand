@@ -1,0 +1,431 @@
+
+;; Function _read (_read, funcdef_no=9, decl_uid=4471, cgraph_uid=9, symbol_order=9)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+;; Generating RTL for gimple basic block 9
+
+;; Generating RTL for gimple basic block 10
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Removing jump 55.
+Merging block 12 into block 11...
+Merged blocks 11 and 12.
+Merged 11 and 12 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 9 NOTE_INSN_DELETED)
+(note 9 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 9 3 2 (set (reg/v:SI 116 [ fd ])
+        (reg:SI 0 r0 [ fd ])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/common/stm32_con.c:43 -1
+     (nil))
+(insn 3 2 4 2 (set (reg/v/f:SI 117 [ buf ])
+        (reg:SI 1 r1 [ buf ])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/common/stm32_con.c:43 -1
+     (nil))
+(insn 4 3 5 2 (set (reg/v:SI 118 [ count ])
+        (reg:SI 2 r2 [ count ])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/common/stm32_con.c:43 -1
+     (nil))
+(note 5 4 11 2 NOTE_INSN_FUNCTION_BEG)
+(insn 11 5 12 2 (set (reg:CC 100 cc)
+        (compare:CC (reg/v:SI 116 [ fd ])
+            (const_int 2 [0x2]))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/common/stm32_con.c:47 -1
+     (nil))
+(jump_insn 12 11 13 2 (set (pc)
+        (if_then_else (gt (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 44)
+            (pc))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/common/stm32_con.c:47 -1
+     (int_list:REG_BR_PROB 167 (nil))
+ -> 44)
+(note 13 12 6 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 6 13 14 4 (set (reg/v:SI 110 [ count ])
+        (reg/v:SI 118 [ count ])) -1
+     (nil))
+(jump_insn 14 6 15 4 (set (pc)
+        (label_ref 33)) -1
+     (nil)
+ -> 33)
+(barrier 15 14 37)
+(code_label 37 15 16 5 5 "" [1 uses])
+(note 16 37 17 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 17 16 18 5 (set (reg:SI 119)
+        (const_int 1073759232 [0x40004400])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/common/stm32_con.c:51 -1
+     (nil))
+(insn 18 17 19 5 (set (reg:SI 0 r0)
+        (reg:SI 119)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/common/stm32_con.c:51 -1
+     (nil))
+(call_insn 19 18 20 5 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("usart_recv_blocking") [flags 0x41]  <function_decl 0x2ab0225d2e00 usart_recv_blocking>) [0 usart_recv_blocking S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/common/stm32_con.c:51 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:SI ("usart_recv_blocking") [flags 0x41]  <function_decl 0x2ab0225d2e00 usart_recv_blocking>)
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 20 19 21 5 (set (reg:SI 120)
+        (reg:SI 0 r0)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/common/stm32_con.c:51 -1
+     (nil))
+(insn 21 20 22 5 (set (reg:SI 112 [ D.4526 ])
+        (reg:SI 120)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/common/stm32_con.c:51 -1
+     (nil))
+(insn 22 21 23 5 (set (reg:SI 113 [ D.4527 ])
+        (zero_extend:SI (subreg:QI (reg:SI 112 [ D.4526 ]) 0))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/common/stm32_con.c:51 -1
+     (nil))
+(insn 23 22 24 5 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 113 [ D.4527 ])
+            (const_int 13 [0xd]))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/common/stm32_con.c:52 -1
+     (nil))
+(jump_insn 24 23 25 5 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 26)
+            (pc))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/common/stm32_con.c:52 -1
+     (int_list:REG_BR_PROB 7200 (nil))
+ -> 26)
+(note 25 24 7 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 7 25 26 6 (set (reg:SI 113 [ D.4527 ])
+        (const_int 10 [0xa])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/common/stm32_con.c:53 -1
+     (nil))
+(code_label 26 7 27 7 4 "" [1 uses])
+(note 27 26 28 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 28 27 29 7 (set (reg:QI 121)
+        (subreg/s/v:QI (reg:SI 113 [ D.4527 ]) 0)) -1
+     (nil))
+(insn 29 28 30 7 (set (mem:QI (reg/v/f:SI 117 [ buf ]) [0 MEM[(char *)buf_8(D)]+0 S1 A8])
+        (reg:QI 121)) -1
+     (nil))
+(debug_insn 30 29 31 7 (var_location:SI rcvd (plus:SI (minus:SI (reg/v:SI 118 [ count ])
+            (reg/v:SI 110 [ count ]))
+        (const_int 1 [0x1]))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/common/stm32_con.c:55 -1
+     (nil))
+(insn 31 30 32 7 (set (reg/v:SI 110 [ count ])
+        (plus:SI (reg/v:SI 110 [ count ])
+            (const_int -1 [0xffffffffffffffff]))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/common/stm32_con.c:56 -1
+     (nil))
+(debug_insn 32 31 33 7 (var_location:SI count (reg/v:SI 110 [ count ])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/common/stm32_con.c:56 -1
+     (nil))
+(code_label 33 32 34 8 3 "" [1 uses])
+(note 34 33 35 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 35 34 36 8 (var_location:SI rcvd (minus:SI (reg/v:SI 118 [ count ])
+        (reg/v:SI 110 [ count ]))) -1
+     (nil))
+(debug_insn 36 35 38 8 (var_location:SI count (reg/v:SI 110 [ count ])) -1
+     (nil))
+(insn 38 36 39 8 (set (reg:CC 100 cc)
+        (compare:CC (reg/v:SI 110 [ count ])
+            (const_int 0 [0]))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/common/stm32_con.c:50 -1
+     (nil))
+(jump_insn 39 38 40 8 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 37)
+            (pc))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/common/stm32_con.c:50 -1
+     (int_list:REG_BR_PROB 9100 (nil))
+ -> 37)
+(note 40 39 41 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 41 40 42 9 (set (reg/v:SI 111 [ rcvd ])
+        (reg/v:SI 118 [ count ])) -1
+     (nil))
+(jump_insn 42 41 43 9 (set (pc)
+        (label_ref 51)) -1
+     (nil)
+ -> 51)
+(barrier 43 42 44)
+(code_label 44 43 45 10 2 "" [1 uses])
+(note 45 44 46 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 46 45 47 10 (var_location:SI rcvd (const_int -1 [0xffffffffffffffff])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/common/stm32_con.c:59 -1
+     (nil))
+(call_insn 47 46 48 10 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("__errno") [flags 0x41]  <function_decl 0x2ab022563d00 __errno>) [0 __errno S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/common/stm32_con.c:60 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:SI ("__errno") [flags 0x41]  <function_decl 0x2ab022563d00 __errno>)
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (nil)))
+(insn 48 47 49 10 (set (reg/f:SI 114 [ D.4528 ])
+        (reg:SI 0 r0)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/common/stm32_con.c:60 -1
+     (nil))
+(insn 49 48 50 10 (set (reg:SI 122)
+        (const_int 5 [0x5])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/common/stm32_con.c:60 -1
+     (nil))
+(insn 50 49 8 10 (set (mem:SI (reg/f:SI 114 [ D.4528 ]) [1 *_21+0 S4 A32])
+        (reg:SI 122)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/common/stm32_con.c:60 -1
+     (nil))
+(insn 8 50 51 10 (set (reg/v:SI 111 [ rcvd ])
+        (const_int -1 [0xffffffffffffffff])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/common/stm32_con.c:59 -1
+     (nil))
+(code_label 51 8 52 11 6 "" [1 uses])
+(note 52 51 53 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 53 52 54 11 (var_location:SI rcvd (reg/v:SI 111 [ rcvd ])) -1
+     (nil))
+(insn 54 53 58 11 (set (reg:SI 115 [ <retval> ])
+        (reg/v:SI 111 [ rcvd ])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/common/stm32_con.c:63 -1
+     (nil))
+(insn 58 54 59 11 (set (reg/i:SI 0 r0)
+        (reg:SI 115 [ <retval> ])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/common/stm32_con.c:64 -1
+     (nil))
+(insn 59 58 0 11 (use (reg/i:SI 0 r0)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/common/stm32_con.c:64 -1
+     (nil))
+
+;; Function _write (_write, funcdef_no=10, decl_uid=4481, cgraph_uid=10, symbol_order=10)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+;; Generating RTL for gimple basic block 9
+
+;; Generating RTL for gimple basic block 10
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Removing jump 93.
+Merging block 12 into block 11...
+Merged blocks 11 and 12.
+Merged 11 and 12 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 31 0 37 NOTE_INSN_DELETED)
+(note 37 31 32 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 32 37 33 2 (set (reg/v:SI 148 [ fd ])
+        (reg:SI 0 r0 [ fd ])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/common/stm32_con.c:65 -1
+     (nil))
+(insn 33 32 34 2 (set (reg/v/f:SI 149 [ buf ])
+        (reg:SI 1 r1 [ buf ])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/common/stm32_con.c:65 -1
+     (nil))
+(insn 34 33 35 2 (set (reg/v:SI 150 [ count ])
+        (reg:SI 2 r2 [ count ])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/common/stm32_con.c:65 -1
+     (nil))
+(note 35 34 39 2 NOTE_INSN_FUNCTION_BEG)
+(insn 39 35 40 2 (set (reg:CC 100 cc)
+        (compare:CC (reg/v:SI 148 [ fd ])
+            (const_int 2 [0x2]))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/common/stm32_con.c:69 -1
+     (nil))
+(jump_insn 40 39 41 2 (set (pc)
+        (if_then_else (gt (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 82)
+            (pc))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/common/stm32_con.c:69 -1
+     (int_list:REG_BR_PROB 167 (nil))
+ -> 82)
+(note 41 40 42 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 42 41 43 4 (set (reg/v:SI 141 [ sent ])
+        (reg/v:SI 150 [ count ])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/common/stm32_con.c:70 -1
+     (nil))
+(debug_insn 43 42 44 4 (var_location:SI sent (reg/v:SI 141 [ sent ])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/common/stm32_con.c:70 -1
+     (nil))
+(debug_insn 44 43 45 4 (var_location:SI ptr (reg/v/f:SI 149 [ buf ])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/common/stm32_con.c:71 -1
+     (nil))
+(insn 45 44 46 4 (set (reg/f:SI 146 [ D.4550 ])
+        (plus:SI (reg/v/f:SI 149 [ buf ])
+            (reg/v:SI 150 [ count ]))) -1
+     (nil))
+(jump_insn 46 45 47 4 (set (pc)
+        (label_ref 70)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/common/stm32_con.c:73 -1
+     (nil)
+ -> 70)
+(barrier 47 46 75)
+(code_label 75 47 48 5 15 "" [1 uses])
+(note 48 75 49 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 49 48 50 5 (set (reg:SI 151)
+        (zero_extend:SI (mem:QI (reg/v/f:SI 149 [ buf ]) [0 MEM[base: buf_4, offset: 0B]+0 S1 A8]))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/common/stm32_con.c:74 -1
+     (nil))
+(insn 50 49 51 5 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 151)
+            (const_int 10 [0xa]))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/common/stm32_con.c:74 -1
+     (nil))
+(jump_insn 51 50 52 5 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 57)
+            (pc))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/common/stm32_con.c:74 -1
+     (int_list:REG_BR_PROB 8629 (nil))
+ -> 57)
+(note 52 51 53 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 53 52 54 6 (set (reg:SI 152)
+        (const_int 1073759232 [0x40004400])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/common/stm32_con.c:75 -1
+     (nil))
+(insn 54 53 55 6 (set (reg:SI 1 r1)
+        (const_int 13 [0xd])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/common/stm32_con.c:75 -1
+     (nil))
+(insn 55 54 56 6 (set (reg:SI 0 r0)
+        (reg:SI 152)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/common/stm32_con.c:75 -1
+     (nil))
+(call_insn 56 55 57 6 (parallel [
+            (call (mem:SI (symbol_ref:SI ("usart_send_blocking") [flags 0x41]  <function_decl 0x2ab0225d2d00 usart_send_blocking>) [0 usart_send_blocking S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/common/stm32_con.c:75 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:SI ("usart_send_blocking") [flags 0x41]  <function_decl 0x2ab0225d2d00 usart_send_blocking>)
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:HI (use (reg:SI 1 r1))
+                (nil)))))
+(code_label 57 56 58 7 14 "" [1 uses])
+(note 58 57 59 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 59 58 60 7 (set (reg/v/f:SI 149 [ buf ])
+        (plus:SI (reg/v/f:SI 149 [ buf ])
+            (const_int 1 [0x1]))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/common/stm32_con.c:77 -1
+     (nil))
+(debug_insn 60 59 61 7 (var_location:SI ptr (reg/v/f:SI 149 [ buf ])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/common/stm32_con.c:77 -1
+     (nil))
+(insn 61 60 62 7 (set (reg:SI 154)
+        (zero_extend:SI (mem:QI (plus:SI (reg/v/f:SI 149 [ buf ])
+                    (const_int -1 [0xffffffffffffffff])) [0 MEM[base: buf_15, offset: 4294967295B]+0 S1 A8]))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/common/stm32_con.c:77 -1
+     (nil))
+(insn 62 61 63 7 (set (reg:HI 153 [ D.4548 ])
+        (subreg:HI (reg:SI 154) 0)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/common/stm32_con.c:77 -1
+     (nil))
+(insn 63 62 64 7 (set (reg:SI 155)
+        (zero_extend:SI (reg:HI 153 [ D.4548 ]))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/common/stm32_con.c:77 -1
+     (nil))
+(insn 64 63 65 7 (set (reg:SI 156)
+        (const_int 1073759232 [0x40004400])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/common/stm32_con.c:77 -1
+     (nil))
+(insn 65 64 66 7 (set (reg:SI 1 r1)
+        (reg:SI 155)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/common/stm32_con.c:77 -1
+     (nil))
+(insn 66 65 67 7 (set (reg:SI 0 r0)
+        (reg:SI 156)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/common/stm32_con.c:77 -1
+     (nil))
+(call_insn 67 66 68 7 (parallel [
+            (call (mem:SI (symbol_ref:SI ("usart_send_blocking") [flags 0x41]  <function_decl 0x2ab0225d2d00 usart_send_blocking>) [0 usart_send_blocking S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/common/stm32_con.c:77 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:SI ("usart_send_blocking") [flags 0x41]  <function_decl 0x2ab0225d2d00 usart_send_blocking>)
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:HI (use (reg:SI 1 r1))
+                (nil)))))
+(debug_insn 68 67 69 7 (var_location:SI sent (reg/v:SI 150 [ count ])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/common/stm32_con.c:78 -1
+     (nil))
+(debug_insn 69 68 70 7 (var_location:SI count (reg/v:SI 150 [ count ])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/common/stm32_con.c:79 -1
+     (nil))
+(code_label 70 69 71 8 13 "" [1 uses])
+(note 71 70 72 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 72 71 73 8 (var_location:SI ptr (reg/v/f:SI 149 [ buf ])) -1
+     (nil))
+(debug_insn 73 72 74 8 (var_location:SI sent (reg/v:SI 150 [ count ])) -1
+     (nil))
+(debug_insn 74 73 76 8 (var_location:SI count (reg/v:SI 150 [ count ])) -1
+     (nil))
+(insn 76 74 77 8 (set (reg:CC 100 cc)
+        (compare:CC (reg/v/f:SI 149 [ buf ])
+            (reg/f:SI 146 [ D.4550 ]))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/common/stm32_con.c:73 -1
+     (nil))
+(jump_insn 77 76 78 8 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 75)
+            (pc))) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/common/stm32_con.c:73 -1
+     (int_list:REG_BR_PROB 9100 (nil))
+ -> 75)
+(note 78 77 79 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 79 78 80 9 (set (reg/v:SI 140 [ sent ])
+        (plus:SI (reg/v:SI 141 [ sent ])
+            (reg/v:SI 141 [ sent ]))) -1
+     (nil))
+(jump_insn 80 79 81 9 (set (pc)
+        (label_ref 89)) -1
+     (nil)
+ -> 89)
+(barrier 81 80 82)
+(code_label 82 81 83 10 12 "" [1 uses])
+(note 83 82 84 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(call_insn 84 83 85 10 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("__errno") [flags 0x41]  <function_decl 0x2ab022563d00 __errno>) [0 __errno S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/common/stm32_con.c:83 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:SI ("__errno") [flags 0x41]  <function_decl 0x2ab022563d00 __errno>)
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (nil)))
+(insn 85 84 86 10 (set (reg/f:SI 145 [ D.4549 ])
+        (reg:SI 0 r0)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/common/stm32_con.c:83 -1
+     (nil))
+(insn 86 85 87 10 (set (reg:SI 157)
+        (const_int 5 [0x5])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/common/stm32_con.c:83 -1
+     (nil))
+(insn 87 86 88 10 (set (mem:SI (reg/f:SI 145 [ D.4549 ]) [1 *_22+0 S4 A32])
+        (reg:SI 157)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/common/stm32_con.c:83 -1
+     (nil))
+(debug_insn 88 87 36 10 (var_location:SI sent (const_int -1 [0xffffffffffffffff])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/common/stm32_con.c:84 -1
+     (nil))
+(insn 36 88 89 10 (set (reg/v:SI 140 [ sent ])
+        (const_int -1 [0xffffffffffffffff])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/common/stm32_con.c:84 -1
+     (nil))
+(code_label 89 36 90 11 16 "" [1 uses])
+(note 90 89 91 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 91 90 92 11 (var_location:SI sent (reg/v:SI 140 [ sent ])) -1
+     (nil))
+(insn 92 91 96 11 (set (reg:SI 147 [ <retval> ])
+        (reg/v:SI 140 [ sent ])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/common/stm32_con.c:87 -1
+     (nil))
+(insn 96 92 97 11 (set (reg/i:SI 0 r0)
+        (reg:SI 147 [ <retval> ])) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/common/stm32_con.c:88 -1
+     (nil))
+(insn 97 96 0 11 (use (reg/i:SI 0 r0)) /home/dl0/Documents/Stage_Recherche/Prog_/c-uart_stm32_integ/c-uart-interface_scheduler__/testing__/atomthreads_custom/ports/cortex-m/common/stm32_con.c:88 -1
+     (nil))
