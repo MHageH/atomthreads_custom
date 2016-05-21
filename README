@@ -1,3 +1,4 @@
+# Atomthreads RTOS
 ---------------------------------------------------------------------------
 
 Library:      Atomthreads
@@ -44,6 +45,8 @@ SOURCE TREE:
  * ports         CPU architecture ports
 
 ---------------------------------------------------------------------------
+
+# Modifications
 
 I added the STM32F4-discovery and STM32vl-discovery boards and removed all 
 the others, even other architectures
