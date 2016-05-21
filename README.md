@@ -34,7 +34,8 @@ See also the README file contained within each folder of the source tree.
 GETTING STARTED:
 
 Building of the sources is carried out from the ports tree. For example to 
-make a software build for the AVR architecture see ports/avr/README.
+make a software build for the Cortex-m architecture 
+see ports/cortex-m/README.
 
 ---------------------------------------------------------------------------
 
@@ -47,6 +48,10 @@ SOURCE TREE:
 ---------------------------------------------------------------------------
 
 # Modifications
+
+- No modification to the kernel code itself.
+- Removed nanolib support since it made conflicts on my machine. Check the
+make file in ports/cortex-m to see if it's necessary for your application.
 
 I added the STM32F4-discovery and STM32vl-discovery boards and removed all 
 the others, even other architectures
