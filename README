@@ -45,12 +45,13 @@ SOURCE TREE:
 
 ---------------------------------------------------------------------------
 
-I added the STM32F4-discovery board and remove all the others, even other
-architectures
+I added the STM32F4-discovery and STM32vl-discovery boards and removed all 
+the others, even otherarchitectures
 
 To compile :
 - cd ports/cortex-m
-- make -j(number_of_cores) BOARD=stm32f4-discovery
+- make -j(number_of_cores) BOARD=stm32f4-discovery OR
+- make -j(number_of_cores) BOARD=stm32vl-discovery
 
 Then :
 - cd build
