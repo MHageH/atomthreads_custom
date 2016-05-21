@@ -45,3 +45,20 @@ SOURCE TREE:
 
 ---------------------------------------------------------------------------
 
+I added the STM32F4-discovery board and remove all the others, even other
+architectures
+
+To compile :
+- cd ports/cortex-m
+- make -j(number_of_cores) BOARD=stm32f4-discovery
+
+Then :
+- cd build
+- st-flash write <name>.bin 0x8000000
+
+(This assumes that you have installed st-link and summon-arm-toolchain, if
+not, check my c_uart_interface for instructions on doing it)
+
+You can find Graphs in Global_graph that explains the functionnality of the
+scheduler
+
