@@ -1,10 +1,10 @@
 # Atomthreads RTOS
 ---------------------------------------------------------------------------
 
-Library:      Atomthreads
-Author:       Kelvin Lawson <info@atomthreads.com>
-Website:      http://atomthreads.com
-License:      BSD Revised
+- Library:      Atomthreads
+- Author:       Kelvin Lawson <info@atomthreads.com>
+- Website:      http://atomthreads.com
+- License:      BSD Revised
 
 ---------------------------------------------------------------------------
 
